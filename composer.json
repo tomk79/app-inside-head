@@ -13,7 +13,13 @@
         ],
         "start-pub": [
             "@php ./src_px2/.px_execute.php \"/?PX=serve.pub&S=127.0.0.1:8081\""
-        ]
+        ],
+		"clearcache": [
+			"@php ./src_px2/.px_execute.php \"/?PX=clearcache\""
+		],
+		"build": [
+			"@php ./src_px2/.px_execute.php \"/?PX=publish.run\""
+		]
     },
     "repositories": [
     ],
