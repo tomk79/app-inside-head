@@ -4,6 +4,11 @@
  */
 return call_user_func( function(){
 
+	if( is_file(__DIR__.'/../../.env') ){
+		$dotenv = \Dotenv\Dotenv::createImmutable( __DIR__.'/../../' );
+		$dotenv->load();
+	}
+
     // initialize
 
     /** コンフィグオブジェクト */
@@ -35,6 +40,8 @@ return call_user_func( function(){
     // -------- Project Custom Setting --------
     // プロジェクトが固有に定義する設定を行います。
     $conf->extra = new stdClass;
+	$conf->extra->open_ai_secret = $_ENV['OPEN_AI_SECRET'] ?? null;
+	$conf->extra->open_ai_org_id = $_ENV['OPEN_AI_ORG_ID'] ?? null;
 
     return $conf;
 } );
