@@ -1,0 +1,46 @@
+{
+    "name": "pickles2/pickles2",
+    "description": "オープンソースのPHP製静的ファイルベースCMS",
+    "keywords": ["pickles2", "CMS"],
+    "license": "MIT",
+    "config": {
+        "process-timeout": 0
+    },
+    "minimum-stability": "stable",
+    "scripts": {
+        "start": [
+            "@php ./src_px2/.px_execute.php \"/?PX=serve&S=127.0.0.1:8080\""
+        ],
+        "start-pub": [
+            "@php ./src_px2/.px_execute.php \"/?PX=serve.pub&S=127.0.0.1:8081\""
+        ]
+    },
+    "repositories": [
+    ],
+    "require": {
+        "php": ">=7.3.0" ,
+        "broccoli-html-editor/broccoli-field-summernote": "~0.3",
+        "pickles2/px-fw-2.x": "~2.1",
+        "pickles2/px2-blog-kit": "~0.1.0",
+        "pickles2/px2-clover": "~0.3",
+        "pickles2/px2-dec": "~2.1",
+        "pickles2/px2-path-resolver": "~2.1",
+        "pickles2/px2-px2dthelper": "~2.2",
+        "pickles2/px2-multitheme": "~2.1",
+        "pickles2/px2-remove-attr": "~2.1",
+        "pickles2/px2-sitemapexcel": "~2.1",
+        "pickles2/px2-publish-ex": "~2.1",
+        "pickles2/px2style": "~3.0",
+        "tomk79/px2-error-reporter": "~0.1",
+        "tomk79/px2-page-list-generator": "~2.0",
+        "tomk79/px2-scss": "~0.1",
+        "tomk79/px2-serve": "~0.1",
+        "vlucas/phpdotenv": "~5.4.0"
+    },
+    "require-dev": {
+    },
+    "autoload": {
+        "files": [
+        ]
+    }
+}
