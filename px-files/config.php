@@ -161,6 +161,7 @@ return call_user_func( function(){
 		'*.direct/*' => 'direct',
 		'*.direct.*' => 'direct',
 
+		'*.php' => 'php',
 		'*.html' => 'html',
 		'*.htm' => 'html',
 		'*.css' => 'css',
@@ -186,6 +187,7 @@ return call_user_func( function(){
 	$conf->paths_enable_sitemap = array(
 		'*.html',
 		'*.htm',
+		'*.php',
 	);
 
 
@@ -298,6 +300,15 @@ return call_user_func( function(){
 	 * サイトマップ読み込みの後、コンテンツ実行の前に実行するプラグインを設定します。
 	 */
 	$conf->funcs->before_content = array(
+        // Paprika
+        picklesFramework2\paprikaFramework\main::before_content(array(
+            // アプリケーションが動的に生成したコンテンツエリアの名称
+            'bowls'=>array(),
+
+            // Paprika を適用する拡張子の一覧
+            'exts' => array('php'),
+        )),
+
 		// BlogKit
 		\pickles2\px2BlogKit\register::blog( array(
 			"blogs" => array(
@@ -390,6 +401,14 @@ return call_user_func( function(){
 		) ).')',
 
 	);
+
+    $conf->funcs->processor->php = array(
+        // Paprika - PHPアプリケーションフレームワーク
+        picklesFramework2\paprikaFramework\main::processor(),
+
+        // html のデフォルトの処理を追加
+        $conf->funcs->processor->html ,
+    );
 
 	$conf->funcs->processor->css = array(
 	);
