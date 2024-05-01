@@ -214,3 +214,12 @@ try{
 	console.error('Module Error:', "px2style:utils/viewport-fit", err);
 }
 })();
+
+window.getCsrfToken = function(callback){
+    $.ajax({
+        url: "/apis/get_csrf_token.php",
+        success: function(data){
+			callback(data.csrf_token);
+        },
+    });
+}
