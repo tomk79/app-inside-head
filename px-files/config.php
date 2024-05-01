@@ -19,7 +19,7 @@ return call_user_func( function(){
 	// project
 
 	/** サイト名 */
-	$conf->name = 'Pickles 2';
+	$conf->name = 'Inside Head';
 
 	/** キャッチフレーズ */
 	$conf->tagline = '';
@@ -45,7 +45,7 @@ return call_user_func( function(){
 	 * 本番環境のドメイン
 	 * (例: www.example.com, 192.168.0.1, www.example.com:8080, etc...)
 	 */
-	$conf->domain = null;
+	$conf->domain = 'inside-head.pxt.jp';
 
 	/** コンテンツルートディレクトリ */
 	$conf->path_controot = '/';
@@ -93,7 +93,9 @@ return call_user_func( function(){
 	 * コマンドのパスが通っていない場合は、絶対パスで設定してください。
 	 */
 	$conf->commands = new stdClass;
-	$conf->commands->php = ($_ENV['CMD_PHP'] ?? 'php');
+	$conf->commands->php = ($_ENV['CMD_PHP']
+		?? (strlen(PHP_BINARY ?? '') ? PHP_BINARY : null)
+		?? 'php');
 	$conf->commands->composer = ($_ENV['CMD_COMPOSER'] ?? 'composer');
 	$conf->commands->git = ($_ENV['CMD_GIT'] ?? 'git');
 
@@ -316,6 +318,7 @@ return call_user_func( function(){
 			'paths_ignore' => array(
 				'/caches/p/__console_resources/*',
 			),
+			'enable_cache_buster' => true,
 		) ),
 
 		// PX=px2dthelper
