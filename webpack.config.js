@@ -8,8 +8,7 @@ const config = {
 	],
 	context: path.resolve(__dirname, 'src_wp'),
 	entry: {
-		"assets/index": './assets/index.js',
-		"assets/test": './assets/test.ts',
+		"dialogue/index_files/script": './dialogue/index_files/script.js',
 	},
 	module: {
 		rules: [

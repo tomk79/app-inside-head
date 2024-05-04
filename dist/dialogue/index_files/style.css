@@ -1,0 +1,8 @@
+.cont-dialog {
+  margin: 1em 0;
+}
+.cont-dialog__inner {
+  padding: 2em;
+  border: 1px solid #999;
+  border-radius: 4px;
+}
