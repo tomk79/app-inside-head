@@ -1,19 +1,12 @@
-import Member from "./includes/Member";
+import Committee from "./includes/Committee";
 
-const members = {
-    presenter: new Member({}),
-    reviewers: [
-        new Member({}),
-        new Member({}),
-        new Member({}),
-    ],
-};
+const committee = new Committee();
 
 $('#cont-btn-sendtest').on('click', ()=>{
     const inputMainTheme = $('textarea[name="main-theme"]').val();
 
     window.getCsrfToken((csrfToken)=>{
-        members.presenter.ask({
+        committee.startDiscussion({
             mainTheme: inputMainTheme,
         });
     });
