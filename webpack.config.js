@@ -2,6 +2,7 @@ const path = require("node:path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const config = {
+	mode: "production",
 	devtool: "source-map",
 	plugins: [
 		new MiniCssExtractPlugin(),
