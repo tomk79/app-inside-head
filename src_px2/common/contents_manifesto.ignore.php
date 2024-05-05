@@ -16,10 +16,12 @@
  * テーマを交換したとき、テーマの要素に影響を与え、崩してしまわないための配慮です。
  *
  */ ?>
- <?php
-	 //$pxがない(=直接アクセスされた)場合、ここで処理を抜ける。
- 	if(!$px){return;}
- ?>
+<?php
+	//$pxがない(=直接アクセスされた)場合、ここで処理を抜ける。
+	if(!$px){return;}
+?>
+
+<meta name="csrf-token" content="" />
 
 <!-- jQuery -->
 <script src="<?= htmlspecialchars($px->href('/common/scripts/jquery-3.6.0.min.js')); ?>" type="text/javascript"></script>

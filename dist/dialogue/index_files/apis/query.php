@@ -16,7 +16,7 @@ while(1){
 }
 unset($tmp_path_autoload);
 
-$paprika = new \picklesFramework2\paprikaFramework\fw\paprika(json_decode('{"file_default_permission":"775","dir_default_permission":"775","filesystem_encoding":"UTF-8","session_name":"PXSID","session_expire":1800,"directory_index":["index.html"],"realpath_controot":"../","realpath_homedir":"../../px-files/paprika/","path_controot":"/","realpath_files":"./query_files/","realpath_files_cache":"../common/px_resources/c/apis/query_files/","href":null,"page_info":null,"parent":null,"breadcrumb":null,"bros":null,"children":null}'), false);
+$paprika = new \picklesFramework2\paprikaFramework\fw\paprika(json_decode('{"file_default_permission":"775","dir_default_permission":"775","filesystem_encoding":"UTF-8","session_name":"PXSID","session_expire":1800,"directory_index":["index.html"],"realpath_controot":"../../../","realpath_homedir":"../../../../px-files/paprika/","path_controot":"/","realpath_files":"./query_files/","realpath_files_cache":"../../../common/px_resources/c/dialogue/index_files/apis/query_files/","href":null,"page_info":null,"parent":null,"breadcrumb":null,"bros":null,"children":null}'), false);
 
 ob_start();
 
@@ -43,7 +43,7 @@ $response = file_get_contents(
                 "messages" => array(
                     array(
                         "role" => "user",
-                        "content" => "こんにちわ。",
+                        "content" => $paprika->req()->get_param('main-theme'),
                     ),
                 ),
                 "temperature" => 0,

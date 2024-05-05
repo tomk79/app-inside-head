@@ -19,7 +19,7 @@ $response = file_get_contents(
                 "messages" => array(
                     array(
                         "role" => "user",
-                        "content" => "こんにちわ。",
+                        "content" => $paprika->req()->get_param('main-theme'),
                     ),
                 ),
                 "temperature" => 0,
