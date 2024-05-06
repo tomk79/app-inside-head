@@ -7,9 +7,9 @@ const config = {
 	plugins: [
 		new MiniCssExtractPlugin(),
 	],
-	context: path.resolve(__dirname, 'src_wp'),
+	context: path.resolve(__dirname, 'src_px2'),
 	entry: {
-		"dialogue/index_files/script": './dialogue/index_files/script.js',
+		"dialogue/index_files/script": './dialogue/index_files/src.ignore/script.js',
 	},
 	module: {
 		rules: [
