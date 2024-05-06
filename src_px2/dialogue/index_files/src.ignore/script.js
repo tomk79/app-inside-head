@@ -3,7 +3,14 @@ import Committee from "./includes/Committee";
 const committee = new Committee();
 let csrfToken;
 
-$('#cont-btn-start').on('click', ()=>{
+const $discussionLog = $('#cont-discussion-log');
+const $btnStart = $('#cont-btn-start');
+const $btnStop = $('#cont-btn-stop');
+$btnStop.attr({'disabled': true});
+
+$btnStart.on('click', ()=>{
+	$btnStart.attr({'disabled': true});
+	$btnStop.attr({'disabled': false});
 	const inputMainTheme = $('textarea[name="main-theme"]').val();
 
 	new Promise((resolve, reject)=>{
@@ -31,14 +38,22 @@ $('#cont-btn-start').on('click', ()=>{
 		});
 
 	}).then((committeeInfo)=>{
+		$discussionLog.html('');
 		committee.init({
 			mainTheme: inputMainTheme,
 			members: committeeInfo,
+			onmessage: (message)=>{
+				console.log('=-=-=-=-= message:', message);
+			},
+			onstop: ()=>{
+				$btnStart.attr({'disabled': false});
+				$btnStop.attr({'disabled': true});
+			},
 		});
 		committee.startDiscussion();
 	});
 });
 
-$('#cont-btn-stop').on('click', ()=>{
+$btnStop.on('click', ()=>{
 	committee.stopDiscussion();
 });

@@ -7,6 +7,9 @@ class Committee {
 	#turnNumber = 0;
 	#talkLog = [];
 
+	#callback_onmessage;
+	#callback_onstop;
+
 	#members;
 
 	/**
@@ -24,6 +27,9 @@ class Committee {
 		this.#currentIdea = '';
 		this.#turnNumber = 0;
 		this.#talkLog = [];
+
+		this.#callback_onmessage = params.onmessage || function(){};
+		this.#callback_onstop = params.onstop || function(){};
 
 		this.#members = {
 			presenter: new Member({
@@ -60,6 +66,10 @@ class Committee {
 		})
 			.then((result)=>{
 				this.#currentIdea = result.choices[0].message.content;
+				this.#callback_onmessage({
+					phase: 'idation',
+					currentIdea: this.#currentIdea,
+				});
 				this.#review();
 			}).catch((err)=>{
 				console.error(err);
@@ -80,6 +90,11 @@ class Committee {
 		});
 		return Promise.allSettled(reviewers)
 			.then((result)=>{
+				this.#callback_onmessage({
+					phase: 'review',
+					reviews: result,
+				});
+
 				const score = this.#scoreingReviews(result);
 				if( score.total <= score.agree ){
 					this.stopDiscussion();
@@ -127,6 +142,7 @@ class Committee {
 	 */
 	stopDiscussion () {
 		this.#status = 'stop';
+		this.#callback_onstop();
 	}
 }
 export default Committee;
