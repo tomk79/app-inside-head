@@ -4,6 +4,7 @@ class Committee {
 	#mainTheme;
 	#currentIdea;
 	#turnNumber = 0;
+	#talkLog = [];
 
 	#members;
 
@@ -20,6 +21,7 @@ class Committee {
 		this.#mainTheme = params.mainTheme;
 		this.#currentIdea = '';
 		this.#turnNumber = 0;
+		this.#talkLog = [];
 
 		this.#members = {
 			presenter: new Member({
@@ -72,11 +74,47 @@ class Committee {
 		return Promise.allSettled(reviewers)
 			.then((result)=>{
 				console.log('#review result:', result);
-				this.#idation();
+				const score = this.#scoreingReviews(result);
+				if( score.total <= score.agree ){
+					this.stopDiscussion();
+				}else{
+					this.#idation();
+				}
 			})
 			.catch((err)=>{
 				console.error(err);
 			});
+	}
+
+	/**
+	 * レビューを評価する
+	 */
+	#scoreingReviews (reviews) {
+		const scores = [];
+		const counter = {
+			"agree": 0, // 賛成
+			"opposition": 0, // 反対
+			"unknown": 0,
+			"total": 0,
+		};
+		reviews.forEach((review, index)=>{
+			const message = review.value.choices[0].message;
+			message.content.match(/^[\s\S]*?(賛成|反対)/);
+			const matched = RegExp.$1;
+			counter.total ++;
+			if( matched=='賛成' ){
+				counter.agree ++;
+				scores.push(true);
+			}else if( matched=='反対' ){
+				counter.opposition ++;
+				scores.push(false);
+			}else{
+				counter.unknown ++;
+				scores.push(null);
+			}
+		});
+		console.log(counter);
+		return counter;
 	}
 
 	/**

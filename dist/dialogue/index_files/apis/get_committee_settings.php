@@ -26,20 +26,23 @@ $execute_php_content = function($paprika){
 
 header("Content-type: text/json");
 
+$template_presenter = file_get_contents($paprika->env()->realpath_homedir.'data/committee/templates/presenter.txt');
+$template_reviewers = file_get_contents($paprika->env()->realpath_homedir.'data/committee/templates/reviewer.txt');
+
 $json = (object) array(
 	"result" => true,
 	"members" => (object) array(
 		'presenter' => (object) array(
-			'template' => file_get_contents($paprika->env()->realpath_homedir.'data/committee/templates/presenter.txt'),
+			'template' => $template_presenter,
 		),
 		'reviewers' => array(
 			(object) array(
 				'name' => 'Reviewer 1',
-				'template' => file_get_contents($paprika->env()->realpath_homedir.'data/committee/templates/reviewer.txt'),
+				'template' => $template_reviewers,
 			),
 			(object) array(
 				'name' => 'Reviewer 2',
-				'template' => file_get_contents($paprika->env()->realpath_homedir.'data/committee/templates/reviewer.txt'),
+				'template' => $template_reviewers,
 			),
 		),
 	),
