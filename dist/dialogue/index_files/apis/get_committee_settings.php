@@ -34,7 +34,12 @@ $json = (object) array(
 		),
 		'reviewers' => array(
 			(object) array(
-				'template' => '',
+				'name' => 'Reviewer 1',
+				'template' => file_get_contents($paprika->env()->realpath_homedir.'data/committee/templates/reviewer.txt'),
+			),
+			(object) array(
+				'name' => 'Reviewer 2',
+				'template' => file_get_contents($paprika->env()->realpath_homedir.'data/committee/templates/reviewer.txt'),
 			),
 		),
 	),
