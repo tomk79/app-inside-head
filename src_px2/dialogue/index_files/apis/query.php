@@ -2,6 +2,9 @@
 
 header("Content-type: text/json");
 
+$input_json = file_get_contents('php://input');
+$params = json_decode($input_json);
+
 $response = file_get_contents(
     'https://api.openai.com/v1/chat/completions',
     false,
@@ -16,12 +19,7 @@ $response = file_get_contents(
             'timeout' => 60 * 3,
             'content' => json_encode(array(
                 "model" => "gpt-3.5-turbo",
-                "messages" => array(
-                    array(
-                        "role" => "user",
-                        "content" => $paprika->req()->get_param('content') ?? '',
-                    ),
-                ),
+                "messages" => $params->messages,
                 "temperature" => 0,
                 "max_tokens" => 1000,
             )),

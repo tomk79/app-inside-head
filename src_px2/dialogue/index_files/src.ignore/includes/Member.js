@@ -13,9 +13,17 @@ class Member {
 				'url': './index_files/apis/query.php',
 				"type": "post",
 				"dataType": "json",
-				"data": {
-					"content": message,
-					"CSRF_TOKEN": $('meta[name=csrf-token]').attr('content'),
+				"contentType": "application/json",
+				"data": JSON.stringify({
+					"messages": [
+						{
+							"role": "user",
+							"content": message,
+						},
+					],
+				}),
+				"headers": {
+					"X-CSRF-TOKEN": $('meta[name=csrf-token]').attr('content'),
 				},
 				"async": true,
 			}).done((result)=>{
