@@ -1,37 +1,53 @@
 import Member from "./Member";
 
 class Committee {
+	#mainTheme;
+	#currentIdea;
 	#members;
 
 	constructor() {
 	}
 
-	init () {
+	init (params) {
+		this.#mainTheme = params.mainTheme;
+		this.#currentIdea = '';
 		this.#members = {
 			presenter: new Member({
-				template: `次の課題について、最もよいと思われる解決方法を1つだけ提案してください。
-
-■課題
-\${mainTheme}
-`
+				template: params.members.presenter.template || '',
 			}),
-			reviewers: [
-				new Member({}),
-				new Member({}),
-				new Member({}),
-			],
+			reviewers: [],
 		};
+		params.members.reviewers.forEach((member)=>{
+			this.#members.reviewers.push(new Member({
+				template: member.template || '',
+			}));
+		});
 	}
 
-	startDiscussion (params) {
+	/**
+	 * ディスカッションを開始する
+	 */
+	startDiscussion () {
+		this.#idation();
+	}
+
+	#idation () {
 		this.#members.presenter.ask({
-			mainTheme: params.mainTheme,
+			mainTheme: this.#mainTheme,
 		}).then((result)=>{
 			console.log(result);
 		}).catch((err)=>{
 			console.error(err);
 		});
 		return;
+	}
+
+	#review () {}
+
+	/**
+	 * ディスカッションを中止する
+	 */
+	stopDiscussion () {
 	}
 }
 export default Committee;

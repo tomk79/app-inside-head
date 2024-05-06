@@ -17,9 +17,24 @@ $('#cont-btn-sendtest').on('click', ()=>{
 			return;
 		});
 	}).then((csrfToken)=>{
-		committee.init();
-		committee.startDiscussion({
-			mainTheme: inputMainTheme,
+		return new Promise((resolve, reject)=>{
+			$.ajax({
+				'url': './index_files/apis/get_committee_settings.php',
+				"type": "get",
+				"dataType": "json",
+				"async": true,
+			}).done((result)=>{
+				resolve(result.members);
+			}).fail((err)=>{
+				console.error(err);
+			});
 		});
+
+	}).then((committeeInfo)=>{
+		committee.init({
+			mainTheme: inputMainTheme,
+			members: committeeInfo,
+		});
+		committee.startDiscussion();
 	});
 });
