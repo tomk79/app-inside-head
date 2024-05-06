@@ -44,6 +44,7 @@ $btnStart.on('click', ()=>{
 			members: committeeInfo,
 			onmessage: (message)=>{
 				console.log('=-=-=-=-= message:', message);
+				$discussionLog.append(`<p>${JSON.stringify(message)}</p>`);
 			},
 			onstop: ()=>{
 				$btnStart.attr({'disabled': false});

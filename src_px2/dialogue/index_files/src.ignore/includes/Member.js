@@ -1,12 +1,19 @@
 class Member {
 	#template = '';
 
+	/**
+	 * Constructor
+	 */
 	constructor(options) {
 		this.#template = options.template || '';
 	}
 
+	/**
+	 * 質問を送信する
+	 * @param {*} params 
+	 * @returns 
+	 */
 	ask (params) {
-		const message = this.#bindTemplate(params);
 
 		return new Promise((resolve, reject)=>{
 			$.ajax({
@@ -15,12 +22,7 @@ class Member {
 				"dataType": "json",
 				"contentType": "application/json",
 				"data": JSON.stringify({
-					"messages": [
-						{
-							"role": "user",
-							"content": message,
-						},
-					],
+					"messages": params,
 				}),
 				"headers": {
 					"X-CSRF-TOKEN": $('meta[name=csrf-token]').attr('content'),
@@ -34,12 +36,16 @@ class Member {
 		});
 	}
 
-	#bindTemplate (contents) {
+	/**
+	 * テンプレートに値をバインドする
+	 */
+	bindTemplate (contents) {
 		let template = this.#template;
 		if(!template){
 			template = '${mainTheme}';
 		}
 		template = template.split('${mainTheme}').join(contents.mainTheme);
+		template = template.split('${currentIdea}').join(contents.currentIdea);
 		return template;
 	}
 }
