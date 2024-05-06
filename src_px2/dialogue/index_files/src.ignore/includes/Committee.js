@@ -1,6 +1,7 @@
 import Member from "./Member";
 
 class Committee {
+	#status = 'stop';
 	#mainTheme;
 	#currentIdea;
 	#turnNumber = 0;
@@ -18,6 +19,7 @@ class Committee {
 	 * 初期化する
 	 */
 	init (params) {
+		this.#status = 'stop';
 		this.#mainTheme = params.mainTheme;
 		this.#currentIdea = '';
 		this.#turnNumber = 0;
@@ -40,13 +42,16 @@ class Committee {
 	 * ディスカッションを開始する
 	 */
 	startDiscussion () {
+		this.#status = 'playing';
 		this.#idation();
 	}
 
+	/**
+	 * アイデアを提案する
+	 */
 	#idation () {
 		this.#turnNumber ++;
-		if( this.#turnNumber > 10 ){
-			console.log('exit');
+		if( this.#turnNumber > 10 || this.#status == 'stop' ){
 			return;
 		}
 
@@ -54,7 +59,6 @@ class Committee {
 			mainTheme: this.#mainTheme,
 		})
 			.then((result)=>{
-				console.log('#idation result:', result);
 				this.#currentIdea = result.choices[0].message.content;
 				this.#review();
 			}).catch((err)=>{
@@ -63,6 +67,9 @@ class Committee {
 		return;
 	}
 
+	/**
+	 * アイデアをレビューする
+	 */
 	#review () {
 		let reviewers = [];
 		this.#members.reviewers.forEach((reviewer)=>{
@@ -73,7 +80,6 @@ class Committee {
 		});
 		return Promise.allSettled(reviewers)
 			.then((result)=>{
-				console.log('#review result:', result);
 				const score = this.#scoreingReviews(result);
 				if( score.total <= score.agree ){
 					this.stopDiscussion();
@@ -113,7 +119,6 @@ class Committee {
 				scores.push(null);
 			}
 		});
-		console.log(counter);
 		return counter;
 	}
 
@@ -121,6 +126,7 @@ class Committee {
 	 * ディスカッションを中止する
 	 */
 	stopDiscussion () {
+		this.#status = 'stop';
 	}
 }
 export default Committee;

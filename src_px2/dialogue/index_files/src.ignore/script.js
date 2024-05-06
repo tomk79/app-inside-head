@@ -3,7 +3,7 @@ import Committee from "./includes/Committee";
 const committee = new Committee();
 let csrfToken;
 
-$('#cont-btn-sendtest').on('click', ()=>{
+$('#cont-btn-start').on('click', ()=>{
 	const inputMainTheme = $('textarea[name="main-theme"]').val();
 
 	new Promise((resolve, reject)=>{
@@ -37,4 +37,8 @@ $('#cont-btn-sendtest').on('click', ()=>{
 		});
 		committee.startDiscussion();
 	});
+});
+
+$('#cont-btn-stop').on('click', ()=>{
+	committee.stopDiscussion();
 });

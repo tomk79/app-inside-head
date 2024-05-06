@@ -4,4 +4,7 @@
 <h2>課題</h2>
 <p><textarea name="main-theme" class="px2-input"></textarea></p>
 </div>
-<p><button type="button" class="px2-btn px2-btn--primary" id="cont-btn-sendtest">送信テスト</button></p>
+<p>
+    <button type="button" class="px2-btn px2-btn--primary" id="cont-btn-start">送信</button>
+    <button type="button" class="px2-btn px2-btn--second" id="cont-btn-stop">中断</button>
+</p>
