@@ -43,7 +43,7 @@ $response = file_get_contents(
                 "messages" => array(
                     array(
                         "role" => "user",
-                        "content" => $paprika->req()->get_param('main-theme'),
+                        "content" => $paprika->req()->get_param('content') ?? '',
                     ),
                 ),
                 "temperature" => 0,
@@ -64,7 +64,7 @@ $result = json_decode($response ?? '');
 
 $json = array(
     "result" => true,
-    "output" => $result,
+    "choices" => $result->choices,
 );
 echo json_encode($json);
 exit();
