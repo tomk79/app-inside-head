@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "059fd577e9d49f9479b92ebcb90ddd93",
+    "content-hash": "31639015cdd83106bc1a668309dc3e3b",
     "packages": [
         {
             "name": "broccoli-html-editor/broccoli-field-summernote",
@@ -970,12 +970,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/pickles2/px-fw-2.x.git",
-                "reference": "a22af435d707a40dbec86d55da3d44664618fc2d"
+                "reference": "95cc34bcb81a6d0f7dc5893f6323d6c5b0355e30"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pickles2/px-fw-2.x/zipball/a22af435d707a40dbec86d55da3d44664618fc2d",
-                "reference": "a22af435d707a40dbec86d55da3d44664618fc2d",
+                "url": "https://api.github.com/repos/pickles2/px-fw-2.x/zipball/95cc34bcb81a6d0f7dc5893f6323d6c5b0355e30",
+                "reference": "95cc34bcb81a6d0f7dc5893f6323d6c5b0355e30",
                 "shasum": ""
             },
             "require": {
@@ -1020,9 +1020,9 @@
             ],
             "support": {
                 "issues": "https://github.com/pickles2/px-fw-2.x/issues",
-                "source": "https://github.com/pickles2/px-fw-2.x/tree/2.1.x"
+                "source": "https://github.com/pickles2/px-fw-2.x/tree/2.1.21"
             },
-            "time": "2024-05-01T12:21:15+00:00"
+            "time": "2024-05-03T03:14:06+00:00"
         },
         {
             "name": "pickles2/px2-blog-kit",
@@ -2011,12 +2011,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/deprecation-contracts.git",
-                "reference": "2c438b99bb2753c1628c1e6f523991edea5b03a4"
+                "reference": "0e0d29ce1f20deffb4ab1b016a7257c4f1e789a1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/deprecation-contracts/zipball/2c438b99bb2753c1628c1e6f523991edea5b03a4",
-                "reference": "2c438b99bb2753c1628c1e6f523991edea5b03a4",
+                "url": "https://api.github.com/repos/symfony/deprecation-contracts/zipball/0e0d29ce1f20deffb4ab1b016a7257c4f1e789a1",
+                "reference": "0e0d29ce1f20deffb4ab1b016a7257c4f1e789a1",
                 "shasum": ""
             },
             "require": {
@@ -2055,7 +2055,7 @@
             "description": "A generic function and convention to trigger deprecation notices",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/deprecation-contracts/tree/main"
+                "source": "https://github.com/symfony/deprecation-contracts/tree/v3.5.0"
             },
             "funding": [
                 {
@@ -2071,7 +2071,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-01-02T14:07:37+00:00"
+            "time": "2024-04-18T09:32:20+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -2820,16 +2820,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "3.x-dev",
+            "version": "v3.9.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "e5269cb30820cfd21dd3b7076c3b2a42fab36201"
+                "reference": "a842d75fed59cdbcbd3a3ad7fb9eb768fc350d58"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/e5269cb30820cfd21dd3b7076c3b2a42fab36201",
-                "reference": "e5269cb30820cfd21dd3b7076c3b2a42fab36201",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/a842d75fed59cdbcbd3a3ad7fb9eb768fc350d58",
+                "reference": "a842d75fed59cdbcbd3a3ad7fb9eb768fc350d58",
                 "shasum": ""
             },
             "require": {
@@ -2843,7 +2843,6 @@
                 "psr/container": "^1.0|^2.0",
                 "symfony/phpunit-bridge": "^5.4.9|^6.4|^7.0"
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
                 "files": [
@@ -2884,7 +2883,7 @@
             ],
             "support": {
                 "issues": "https://github.com/twigphp/Twig/issues",
-                "source": "https://github.com/twigphp/Twig/tree/3.x"
+                "source": "https://github.com/twigphp/Twig/tree/v3.9.3"
             },
             "funding": [
                 {
@@ -2896,7 +2895,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-05-01T12:11:27+00:00"
+            "time": "2024-04-18T11:59:33+00:00"
         },
         {
             "name": "vlucas/phpdotenv",

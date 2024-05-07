@@ -43,7 +43,8 @@
         "tomk79/px2-page-list-generator": "~2.0",
         "tomk79/px2-scss": "~0.1",
         "tomk79/px2-serve": "~0.1",
-        "vlucas/phpdotenv": "~5.4.0"
+        "vlucas/phpdotenv": "~5.4.0",
+        "twig/twig": "~3.9.3"
     },
     "autoload": {
         "files": [
