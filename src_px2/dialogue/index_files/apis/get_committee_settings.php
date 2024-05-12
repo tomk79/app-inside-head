@@ -2,8 +2,8 @@
 
 header("Content-type: text/json");
 
-$template_presenter = file_get_contents($paprika->env()->realpath_homedir.'data/committee/templates/presenter.txt');
-$template_reviewers = file_get_contents($paprika->env()->realpath_homedir.'data/committee/templates/reviewer.txt');
+$template_presenter = file_get_contents($paprika->env()->realpath_homedir.'data/committee/templates/presenter.twig');
+$template_reviewers = file_get_contents($paprika->env()->realpath_homedir.'data/committee/templates/reviewer.twig');
 
 $json = (object) array(
 	"result" => true,

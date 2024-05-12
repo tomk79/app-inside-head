@@ -1,3 +1,6 @@
+const Twig = require('twig');
+// import Twig from 'twig';
+
 class Member {
 	#template = '';
 
@@ -39,14 +42,21 @@ class Member {
 	/**
 	 * テンプレートに値をバインドする
 	 */
-	bindTemplate (contents) {
-		let template = this.#template;
-		if(!template){
-			template = '${mainTheme}';
+	bindTemplate( data ) {
+		var rtn = '';
+		var twig;
+		try{
+			twig = Twig.twig;
+
+			rtn = new twig({
+				'data': this.#template,
+			}).render(data);
+		}catch(e){
+			var errorMessage = 'TemplateEngine "Twig" Rendering ERROR.';
+			console.error( errorMessage );
+			rtn = errorMessage;
 		}
-		template = template.split('${mainTheme}').join(contents.mainTheme);
-		template = template.split('${currentIdea}').join(contents.currentIdea);
-		return template;
+		return rtn;
 	}
 }
 export default Member;

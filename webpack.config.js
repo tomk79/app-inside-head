@@ -44,5 +44,11 @@ const config = {
 	output: {
 		path: path.resolve(__dirname, "src_px2/"),
 	},
+	resolve: {
+		fallback: {
+			"path": require.resolve("path-browserify"),
+		},
+	},
+
 };
 module.exports = config;
