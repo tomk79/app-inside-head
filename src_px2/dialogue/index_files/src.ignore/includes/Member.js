@@ -1,9 +1,15 @@
 class Member {
+	#profile;
 
 	/**
 	 * Constructor
 	 */
-	constructor(options) {
+	constructor(profile) {
+		this.#profile = profile;
+	}
+
+	getProfile () {
+		return this.#profile;
 	}
 
 	/**

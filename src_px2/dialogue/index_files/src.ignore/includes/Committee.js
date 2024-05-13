@@ -1,10 +1,12 @@
 import Twig from "twig";
 import Member from "./Member";
 import templateIdeation from "-!text-loader!./templates/prompts/ideation.twig";
+import templateRetake from "-!text-loader!./templates/prompts/retake.twig";
 import templateReview from "-!text-loader!./templates/prompts/review.twig";
 
 const templates = {
 	ideation: templateIdeation,
+	retake: templateRetake,
 	review: templateReview,
 };
 
@@ -40,13 +42,11 @@ class Committee {
 		this.#callback_onstop = params.onstop || function(){};
 
 		this.#members = {
-			presenter: new Member({
-			}),
+			presenter: new Member(params.members.presenter),
 			reviewers: [],
 		};
 		params.members.reviewers.forEach((member)=>{
-			this.#members.reviewers.push(new Member({
-			}));
+			this.#members.reviewers.push(new Member(member));
 		});
 	}
 
@@ -95,7 +95,7 @@ class Committee {
 	 * アイデアをレビューする
 	 */
 	#review () {
-		let reviewers = [];
+		let reviewersDialogs = [];
 		this.#members.reviewers.forEach((reviewer)=>{
 			const reviewMessage = [{
 				role: "user",
@@ -105,10 +105,10 @@ class Committee {
 				}),
 			}];
 
-			reviewers.push(reviewer.ask(reviewMessage));
+			reviewersDialogs.push(reviewer.ask(reviewMessage));
 		});
 
-		return Promise.allSettled(reviewers)
+		return Promise.allSettled(reviewersDialogs)
 			.then((result)=>{
 				const score = this.#scoreingReviews(result);
 
@@ -116,6 +116,7 @@ class Committee {
 				result.forEach((review, index)=>{
 					const message = review.value.choices[0].message;
 					message.stance = score.scores[index];
+					message.reviewer = this.#members.reviewers[index].getProfile();
 					messages.push(message);
 				});
 				this.#callback_onmessage({
@@ -128,7 +129,11 @@ class Committee {
 				}else{
 					this.#ideationMessageLog.push({
 						role: "user",
-						content: `可決しませんでした。修正案を提案してください。`, // TODO: 修正案生成のプロンプトを作成する
+						content: this.#bindTemplate("retake", {
+							mainTheme: this.#mainTheme,
+							currentIdea: this.#currentIdea,
+							reviews: messages,
+						}),
 					});
 
 					this.#ideation();
