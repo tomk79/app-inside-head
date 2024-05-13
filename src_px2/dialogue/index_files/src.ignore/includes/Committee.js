@@ -1,4 +1,6 @@
 import Member from "./Member";
+import templateIdation from "-!text-loader!./templates/prompts/idation.twig";
+import templateReview from "-!text-loader!./templates/prompts/review.twig";
 
 class Committee {
 	#status = 'stop';
@@ -33,13 +35,13 @@ class Committee {
 
 		this.#members = {
 			presenter: new Member({
-				template: params.members.presenter.template || '',
+				template: templateIdation || '',
 			}),
 			reviewers: [],
 		};
 		params.members.reviewers.forEach((member)=>{
 			this.#members.reviewers.push(new Member({
-				template: member.template || '',
+				template: templateReview || '',
 			}));
 		});
 	}

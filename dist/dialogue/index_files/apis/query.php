@@ -25,9 +25,6 @@ $execute_php_content = function($paprika){
 <?php
 header("Content-type: text/json");
 
-$loader = new \Twig\Loader\FilesystemLoader($paprika->env()->realpath_homedir.'data/committee/templates/');
-$twig = new \Twig\Environment($loader, []);
-
 $input_json = file_get_contents('php://input');
 $params = json_decode($input_json);
 

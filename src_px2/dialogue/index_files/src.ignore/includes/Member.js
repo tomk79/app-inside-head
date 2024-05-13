@@ -17,7 +17,6 @@ class Member {
 	 * @returns 
 	 */
 	ask (params) {
-
 		return new Promise((resolve, reject)=>{
 			$.ajax({
 				'url': './index_files/apis/query.php',
