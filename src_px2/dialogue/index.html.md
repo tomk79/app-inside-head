@@ -2,7 +2,8 @@
 <?php ob_start(); ?><script src="<?= htmlspecialchars( $px->path_files('/script.js') ) ?>"></script><?php $px->bowl()->put( ob_get_clean(), 'foot' );?>
 <div>
 <h2>課題</h2>
-<p><textarea name="main-theme" class="px2-input px2-input--block">今夜のおかずを何にするか？</textarea></p>
+<p><textarea name="main-theme" class="px2-input px2-input--block">今夜のディーナーの献立を何にするか？
+カレーとうどんとハンバーグの中から1つを選択する。</textarea></p>
 </div>
 <p>
     <button type="button" class="px2-btn px2-btn--primary" id="cont-btn-start">送信</button>

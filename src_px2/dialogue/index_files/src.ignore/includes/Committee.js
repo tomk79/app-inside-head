@@ -102,6 +102,7 @@ class Committee {
 				content: this.#bindTemplate("review", {
 					mainTheme: this.#mainTheme,
 					currentIdea: this.#currentIdea,
+					profile: reviewer.getProfile(),
 				}),
 			}];
 

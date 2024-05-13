@@ -6,18 +6,30 @@
         {
             "name": "Reviewer 1",
             "role": "",
-            "personalities": [],
+            "personalities": [
+                "好きな食べ物は、うどんと餃子とカレーライス。",
+                "嫌いな食べ物は、チーズとピーマンと魚。",
+                "同じメニューを続けて食べたくはない。"
+            ],
             "features": [],
             "abilities": [],
-            "episodes": []
+            "episodes": [
+                "昨日のディナーは「うどん」だった。"
+            ]
         },
         {
             "name": "Reviewer 2",
             "role": "",
-            "personalities": [],
+            "personalities": [
+                "好きな食べ物は、カレーライスとハンバーグとグラタン。",
+                "嫌いな食べ物は、チーズとピーマンと魚。",
+                "一度気に入ったら、毎日でも同じメニューを続けて食べたい。"
+            ],
             "features": [],
             "abilities": [],
-            "episodes": []
+            "episodes": [
+                "昨日のディナーは「カレーライス」だった。"
+            ]
         }
     ]
 }
