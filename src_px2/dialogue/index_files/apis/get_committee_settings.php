@@ -2,20 +2,11 @@
 
 header("Content-type: text/json");
 
+$realpath_committee_member_settings_base_dir = $paprika->fs()->get_realpath($paprika->env()->realpath_homedir.'data/committee/');
+
 $json = (object) array(
 	"result" => true,
-	"members" => (object) array(
-		'presenter' => (object) array(
-		),
-		'reviewers' => array(
-			(object) array(
-				'name' => 'Reviewer 1',
-			),
-			(object) array(
-				'name' => 'Reviewer 2',
-			),
-		),
-	),
+	"members" => json_decode(file_get_contents($realpath_committee_member_settings_base_dir.'members/alpha.json')),
 );
 echo json_encode($json);
 exit();

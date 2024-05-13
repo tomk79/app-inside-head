@@ -1,0 +1,23 @@
+{
+    "presenter": {
+        "name": "Presenter"
+    },
+    "reviewers": [
+        {
+            "name": "Reviewer 1",
+            "role": "",
+            "personalities": [],
+            "features": [],
+            "abilities": [],
+            "episodes": []
+        },
+        {
+            "name": "Reviewer 2",
+            "role": "",
+            "personalities": [],
+            "features": [],
+            "abilities": [],
+            "episodes": []
+        }
+    ]
+}
