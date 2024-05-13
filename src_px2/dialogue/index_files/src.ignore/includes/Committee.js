@@ -1,13 +1,19 @@
+import Twig from "twig";
 import Member from "./Member";
-import templateIdation from "-!text-loader!./templates/prompts/idation.twig";
+import templateIdeation from "-!text-loader!./templates/prompts/ideation.twig";
 import templateReview from "-!text-loader!./templates/prompts/review.twig";
+
+const templates = {
+	ideation: templateIdeation,
+	review: templateReview,
+};
 
 class Committee {
 	#status = 'stop';
 	#mainTheme;
 	#currentIdea;
 	#turnNumber = 0;
-	#idationMessageLog = [];
+	#ideationMessageLog = [];
 
 	#callback_onmessage;
 	#callback_onstop;
@@ -28,20 +34,18 @@ class Committee {
 		this.#mainTheme = params.mainTheme;
 		this.#currentIdea = '';
 		this.#turnNumber = 0;
-		this.#idationMessageLog = [];
+		this.#ideationMessageLog = [];
 
 		this.#callback_onmessage = params.onmessage || function(){};
 		this.#callback_onstop = params.onstop || function(){};
 
 		this.#members = {
 			presenter: new Member({
-				template: templateIdation || '',
 			}),
 			reviewers: [],
 		};
 		params.members.reviewers.forEach((member)=>{
 			this.#members.reviewers.push(new Member({
-				template: templateReview || '',
 			}));
 		});
 	}
@@ -51,33 +55,33 @@ class Committee {
 	 */
 	startDiscussion () {
 		this.#status = 'playing';
-		this.#idation();
+		this.#ideation();
 	}
 
 	/**
 	 * アイデアを提案する
 	 */
-	#idation () {
+	#ideation () {
 		this.#turnNumber ++;
 		if( this.#turnNumber > 10 || this.#status == 'stop' ){
 			return;
 		}
 
-		if(!this.#idationMessageLog.length){
-			this.#idationMessageLog.push({
+		if(!this.#ideationMessageLog.length){
+			this.#ideationMessageLog.push({
 				role: "user",
-				content: this.#members.presenter.bindTemplate({
+				content: this.#bindTemplate("ideation", {
 					mainTheme: this.#mainTheme,
 				}),
 			});
 		}
 
-		this.#members.presenter.ask(this.#idationMessageLog)
+		this.#members.presenter.ask(this.#ideationMessageLog)
 			.then((result)=>{
-				this.#idationMessageLog.push(result.choices[0].message);
+				this.#ideationMessageLog.push(result.choices[0].message);
 				this.#currentIdea = result.choices[0].message.content;
 				this.#callback_onmessage({
-					phase: 'idation',
+					phase: 'ideation',
 					currentIdea: this.#currentIdea,
 				});
 				this.#review();
@@ -95,7 +99,7 @@ class Committee {
 		this.#members.reviewers.forEach((reviewer)=>{
 			const reviewMessage = [{
 				role: "user",
-				content: reviewer.bindTemplate({
+				content: this.#bindTemplate("review", {
 					mainTheme: this.#mainTheme,
 					currentIdea: this.#currentIdea,
 				}),
@@ -122,12 +126,12 @@ class Committee {
 				if( score.total <= score.agree ){
 					this.stopDiscussion();
 				}else{
-					this.#idationMessageLog.push({
+					this.#ideationMessageLog.push({
 						role: "user",
 						content: `可決しませんでした。修正案を提案してください。`, // TODO: 修正案生成のプロンプトを作成する
 					});
 
-					this.#idation();
+					this.#ideation();
 				}
 			})
 			.catch((err)=>{
@@ -171,6 +175,24 @@ class Committee {
 	stopDiscussion () {
 		this.#status = 'stop';
 		this.#callback_onstop();
+	}
+
+	/**
+	 * テンプレートに値をバインドする
+	 */
+	#bindTemplate( templateId, data ) {
+		var rtn = '';
+		var twig = Twig.twig;
+		try{
+			rtn = new twig({
+				'data': templates[templateId],
+			}).render(data);
+		}catch(e){
+			var errorMessage = 'TemplateEngine "Twig" Rendering ERROR.';
+			console.error( errorMessage );
+			rtn = errorMessage;
+		}
+		return rtn;
 	}
 }
 export default Committee;

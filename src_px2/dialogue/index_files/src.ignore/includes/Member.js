@@ -1,14 +1,9 @@
-const Twig = require('twig');
-// import Twig from 'twig';
-
 class Member {
-	#template = '';
 
 	/**
 	 * Constructor
 	 */
 	constructor(options) {
-		this.#template = options.template || '';
 	}
 
 	/**
@@ -36,26 +31,6 @@ class Member {
 				reject(err);
 			});
 		});
-	}
-
-	/**
-	 * テンプレートに値をバインドする
-	 */
-	bindTemplate( data ) {
-		var rtn = '';
-		var twig;
-		try{
-			twig = Twig.twig;
-
-			rtn = new twig({
-				'data': this.#template,
-			}).render(data);
-		}catch(e){
-			var errorMessage = 'TemplateEngine "Twig" Rendering ERROR.';
-			console.error( errorMessage );
-			rtn = errorMessage;
-		}
-		return rtn;
 	}
 }
 export default Member;
