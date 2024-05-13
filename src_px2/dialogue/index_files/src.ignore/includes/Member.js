@@ -25,6 +25,7 @@ class Member {
 				"dataType": "json",
 				"contentType": "application/json",
 				"data": JSON.stringify({
+					"type": this.#profile.type,
 					"messages": params,
 				}),
 				"headers": {

@@ -41,7 +41,7 @@ $response = file_get_contents(
 			)),
 			'timeout' => 60 * 3,
 			'content' => json_encode(array(
-				"model" => "gpt-3.5-turbo",
+				"model" => $params->type->model ?? "gpt-3.5-turbo",
 				"messages" => $params->messages,
 				"temperature" => 0,
 				"max_tokens" => 1000,

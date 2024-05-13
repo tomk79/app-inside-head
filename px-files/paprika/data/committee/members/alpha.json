@@ -1,10 +1,16 @@
 {
     "presenter": {
-        "name": "Presenter"
+        "name": "Presenter",
+        "type": {
+            "model": "gpt-3.5-turbo"
+        }
     },
     "reviewers": [
         {
             "name": "Reviewer 1",
+            "type": {
+                "model": "gpt-3.5-turbo"
+            },
             "role": "",
             "personalities": [
                 "好きな食べ物は、うどんと餃子とカレーライス。",
@@ -19,6 +25,9 @@
         },
         {
             "name": "Reviewer 2",
+            "type": {
+                "model": "gpt-3.5-turbo"
+            },
             "role": "",
             "personalities": [
                 "好きな食べ物は、カレーライスとハンバーグとグラタン。",
