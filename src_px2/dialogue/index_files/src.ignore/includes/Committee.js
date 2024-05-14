@@ -134,6 +134,7 @@ class Committee {
 							mainTheme: this.#mainTheme,
 							currentIdea: this.#currentIdea,
 							reviews: messages,
+							score: score,
 						}),
 					});
 
@@ -151,7 +152,7 @@ class Committee {
 	#scoreingReviews (reviews) {
 		const counter = {
 			"agree": 0, // 賛成
-			"opposition": 0, // 反対
+			"disagree": 0, // 反対
 			"unknown": 0,
 			"total": 0,
 			"scores": [],
@@ -165,7 +166,7 @@ class Committee {
 				counter.agree ++;
 				counter.scores.push(true);
 			}else if( matched=='反対' ){
-				counter.opposition ++;
+				counter.disagree ++;
 				counter.scores.push(false);
 			}else{
 				counter.unknown ++;

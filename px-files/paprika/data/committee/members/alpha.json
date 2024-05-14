@@ -2,14 +2,14 @@
     "presenter": {
         "name": "Presenter",
         "type": {
-            "model": "gpt-3.5-turbo"
+            "model": "gpt-4o"
         }
     },
     "reviewers": [
         {
             "name": "Reviewer 1",
             "type": {
-                "model": "gpt-3.5-turbo"
+                "model": "gpt-4o"
             },
             "role": "",
             "personalities": [
@@ -26,12 +26,12 @@
         {
             "name": "Reviewer 2",
             "type": {
-                "model": "gpt-3.5-turbo"
+                "model": "gpt-4o"
             },
             "role": "",
             "personalities": [
-                "好きな食べ物は、カレーライスとハンバーグとグラタン。",
-                "嫌いな食べ物は、チーズとピーマンと魚。",
+                "好きな食べ物は、ハンバーグとグラタン。",
+                "嫌いな食べ物は、カレーライスとチーズとピーマンと魚。",
                 "一度気に入ったら、毎日でも同じメニューを続けて食べたい。"
             ],
             "features": [],
