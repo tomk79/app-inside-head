@@ -126,6 +126,10 @@ class Committee {
 				});
 
 				if( score.total <= score.agree ){
+					this.#callback_onmessage({
+						phase: 'conclusion',
+						currentIdea: this.#currentIdea,
+					});
 					this.stopDiscussion();
 				}else{
 					this.#ideationMessageLog.push({
