@@ -1,1 +1,12 @@
-<p>profile</p>
+<div class="diaolog-member-profile">
+    <p>profile</p>
+    <div>
+        <p>{{ presenter.name }}</p>
+    </div>
+    {% for reviewer in reviewers %}
+    <div>
+        <p>{{ reviewer.name }}</p>
+        <p>{{ dump(reviewer) }}</p>
+    </div>
+    {% endfor %}
+</div>

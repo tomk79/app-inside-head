@@ -1,1 +1,9 @@
-<p>review</p>
+<div class="diaolog-review">
+    <p>review</p>
+    {% for review in reviews %}
+    <div class="diaolog-review__stance-{{ review.stance ? "true" : "false" }}">
+        <p>{{ review.reviewer.name }}</p>
+        <p>{{ review.content }}</p>
+    </div>
+    {% endfor %}
+</div>
