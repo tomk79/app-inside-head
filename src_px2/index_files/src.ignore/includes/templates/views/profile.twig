@@ -1,12 +1,14 @@
-<div class="diaolog-member-profile">
-    <p>profile</p>
-    <div>
-        <p>{{ presenter.name }}</p>
+<div class="cont-diaolog-member-profile">
+    <div class="cont-diaolog-member-profile__inner">
+        <h2>profile</h2>
+        <div>
+            <p>{{ presenter.name }}</p>
+        </div>
+        {% for reviewer in reviewers %}
+        <div>
+            <p>{{ reviewer.name }}</p>
+            <p>{{ dump(reviewer) }}</p>
+        </div>
+        {% endfor %}
     </div>
-    {% for reviewer in reviewers %}
-    <div>
-        <p>{{ reviewer.name }}</p>
-        <p>{{ dump(reviewer) }}</p>
-    </div>
-    {% endfor %}
 </div>

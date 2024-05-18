@@ -1,6 +1,6 @@
 {
     "presenter": {
-        "name": "Presenter",
+        "name": "The Presenter",
         "type": {
             "model": "gpt-4o"
         }

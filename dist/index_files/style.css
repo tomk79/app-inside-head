@@ -1,8 +1,52 @@
-.cont-dialog {
+.cont-diaolog-member-profile, .cont-dialog-ideation, .cont-diaolog-review, .cont-diaolog-conclusion {
   margin: 1em 0;
+  border: 1px solid #999;
+  border-radius: 13px;
+  position: relative;
 }
-.cont-dialog__inner {
+.cont-diaolog-member-profile__inner, .cont-dialog-ideation__inner, .cont-diaolog-review__inner, .cont-diaolog-conclusion__inner {
   padding: 2em;
   border: 1px solid #999;
   border-radius: 4px;
+}
+.cont-diaolog-member-profile h2, .cont-diaolog-member-profile h3, .cont-dialog-ideation h2, .cont-dialog-ideation h3, .cont-diaolog-review h2, .cont-diaolog-review h3, .cont-diaolog-conclusion h2, .cont-diaolog-conclusion h3 {
+  font-size: 12px;
+  margin: 0;
+  position: absolute;
+  left: 5px;
+  top: 5px;
+}
+.cont-diaolog-member-profile {
+  border: 1px solid #ab8800;
+  background-color: #fff3e1;
+}
+.cont-dialog-ideation {
+  border: 1px solid #1d1dae;
+  background-color: #dde9ff;
+}
+.cont-diaolog-review {
+  border: 1px solid #484848;
+  background-color: #e2e2e2;
+}
+.cont-diaolog-review__answer {
+  border: 1px solid #999;
+  border-radius: 5px;
+  margin: 1em 0;
+  position: relative;
+}
+.cont-diaolog-review__answer__inner {
+  padding: 2em;
+}
+.cont-diaolog-review__answer--stance-true {
+  border: 1px solid #169100;
+  background-color: #dfffe2;
+}
+.cont-diaolog-review__answer--stance-false {
+  border: 1px solid #333333;
+  background-color: #e2e2e2;
+}
+.cont-diaolog-conclusion {
+  margin-top: 3em;
+  border: 1px solid #1d1dae;
+  background-color: #dde9ff;
 }

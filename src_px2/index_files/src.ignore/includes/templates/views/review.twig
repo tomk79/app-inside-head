@@ -1,9 +1,13 @@
-<div class="diaolog-review">
-    <p>review</p>
-    {% for review in reviews %}
-    <div class="diaolog-review__stance-{{ review.stance ? "true" : "false" }}">
-        <p>{{ review.reviewer.name }}</p>
-        <p>{{ review.content }}</p>
+<div class="cont-diaolog-review">
+    <div class="cont-diaolog-review__inner">
+        <h2>review</h2>
+        {% for review in reviews %}
+        <div class="cont-diaolog-review__answer cont-diaolog-review__answer--stance-{{ review.stance ? "true" : "false" }}">
+            <div class="cont-diaolog-review__answer__inner">
+                <h3>{{ review.reviewer.name }}</h3>
+                <p>{{ review.content }}</p>
+            </div>
+        </div>
+        {% endfor %}
     </div>
-    {% endfor %}
 </div>
