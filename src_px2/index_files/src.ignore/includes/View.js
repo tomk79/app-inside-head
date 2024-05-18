@@ -3,6 +3,7 @@ import templateProfile from "-!text-loader!./templates/views/profile.twig";
 import templateConclusion from "-!text-loader!./templates/views/conclusion.twig";
 import templateIdeation from "-!text-loader!./templates/views/ideation.twig";
 import templateReview from "-!text-loader!./templates/views/review.twig";
+import {marked} from 'marked';
 
 const templates = {
 	profile: templateProfile,
@@ -10,6 +11,12 @@ const templates = {
 	ideation: templateIdeation,
 	review: templateReview,
 };
+
+// カスタム関数の登録
+Twig.extendFunction('answer_to_html', function(value) {
+	value = marked(value);
+	return value;
+});
 
 class View {
 

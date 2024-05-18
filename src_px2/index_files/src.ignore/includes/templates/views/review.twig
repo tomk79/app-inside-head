@@ -5,7 +5,7 @@
         <div class="cont-diaolog-review__answer cont-diaolog-review__answer--stance-{{ review.stance ? "true" : "false" }}">
             <div class="cont-diaolog-review__answer__inner">
                 <h3>{{ review.reviewer.name }}</h3>
-                <p>{{ review.content }}</p>
+                <p>{{ answer_to_html(review.content) }}</p>
             </div>
         </div>
         {% endfor %}
