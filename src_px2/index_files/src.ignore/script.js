@@ -10,6 +10,32 @@ const $btnStart = $('#cont-btn-start');
 const $btnStop = $('#cont-btn-stop');
 $btnStop.attr({'disabled': true});
 
+const $inputCommitteeSettings = $('input[name=committee-settings]');
+let committeeSettings = null;
+
+// --------------------------------------
+// コミッティ設定をロードする
+$inputCommitteeSettings.on('change', function(e){
+	var fileInfo = e.target.files[0];
+	var realpathSelected = $(this).val();
+
+	if( realpathSelected ){
+		function readSelectedLocalFile(fileInfo, callback){
+			var reader = new FileReader();
+			reader.onload = function(evt) {
+				callback( evt.target.result );
+			}
+			reader.readAsText(fileInfo);
+		}
+
+		readSelectedLocalFile(fileInfo, function(loadedString){
+			committeeSettings = JSON.parse(loadedString);
+		});
+	}
+});
+
+// --------------------------------------
+// ディスカッションを開始する
 $btnStart.on('click', ()=>{
 	$btnStart.attr({'disabled': true});
 	$btnStop.attr({'disabled': false});
@@ -27,13 +53,18 @@ $btnStart.on('click', ()=>{
 		});
 	}).then((csrfToken)=>{
 		return new Promise((resolve, reject)=>{
+			if(committeeSettings){
+				resolve(committeeSettings);
+				return;
+			}
 			$.ajax({
 				'url': './index_files/apis/get_committee_settings.php',
 				"type": "get",
 				"dataType": "json",
 				"async": true,
 			}).done((result)=>{
-				resolve(result.members);
+				committeeSettings = result.members;
+				resolve(committeeSettings);
 			}).fail((err)=>{
 				console.error(err);
 			});
@@ -57,6 +88,8 @@ $btnStart.on('click', ()=>{
 	});
 });
 
+// --------------------------------------
+// ディスカッションを中断する
 $btnStop.on('click', ()=>{
 	committee.stopDiscussion();
 });
