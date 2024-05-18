@@ -9,7 +9,7 @@ const config = {
 	],
 	context: path.resolve(__dirname, 'src_px2'),
 	entry: {
-		"dialogue/index_files/script": './dialogue/index_files/src.ignore/script.js',
+		"index_files/script": './index_files/src.ignore/script.js',
 	},
 	module: {
 		rules: [

@@ -1,6 +1,6 @@
 {
   "include": [
-    "src_px2/dialogue/index_files/src.ignore/**/*"
+    "src_px2/index_files/src.ignore/**/*"
   ],
   "exclude": [
     "node_modules"
