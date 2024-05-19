@@ -1,14 +1,107 @@
 <div class="cont-diaolog-member-profile">
-    <div class="cont-diaolog-member-profile__inner">
-        <h2 class="cont-diaolog-member-profile__section-title">profile</h2>
-        <div>
-            <p>{{ presenter.name }}</p>
-        </div>
-        {% for reviewer in reviewers %}
-        <div>
-            <p>{{ reviewer.name }}</p>
-            <p>{{ dump(reviewer) }}</p>
-        </div>
-        {% endfor %}
-    </div>
+	<div class="cont-diaolog-member-profile__inner">
+		<h2 class="cont-diaolog-member-profile__section-title">profile</h2>
+
+		{# --------------------------------------
+		プレゼンター #}
+		<div>
+			<h3>{{ presenter.name }}</h3>
+
+			{% if presenter.personalities %}
+			<div>
+				<p>性格</p>
+				<ul>
+				{% for personality in presenter.personalities %}
+					<li>{{ personality }}</li>
+				{% endfor %}
+				</ul>
+			</div>
+			{% endif %}
+
+			{% if presenter.features %}
+			<div>
+				<p>特徴</p>
+				<ul>
+				{% for feature in presenter.features %}
+					<li>{{ feature }}</li>
+				{% endfor %}
+				</ul>
+			</div>
+			{% endif %}
+
+			{% if presenter.abilities %}
+			<div>
+				<p>能力・技能</p>
+				<ul>
+				{% for ability in presenter.abilities %}
+					<li>{{ ability }}</li>
+				{% endfor %}
+				</ul>
+			</div>
+			{% endif %}
+
+			{% if presenter.episodes %}
+			<div>
+				<p>エピソード</p>
+				<ul>
+				{% for episode in presenter.episodes %}
+					<li>{{ episode }}</li>
+				{% endfor %}
+				</ul>
+			</div>
+			{% endif %}
+		</div>
+
+		{# --------------------------------------
+		レビュワー #}
+		{% for reviewer in reviewers %}
+			<div>
+				<h3>{{ reviewer.name }}</h3>
+
+				{% if reviewer.personalities %}
+				<div>
+					<p>性格</p>
+					<ul>
+					{% for personality in reviewer.personalities %}
+						<li>{{ personality }}</li>
+					{% endfor %}
+					</ul>
+				</div>
+				{% endif %}
+
+				{% if reviewer.features %}
+				<div>
+					<p>特徴</p>
+					<ul>
+					{% for feature in reviewer.features %}
+						<li>{{ feature }}</li>
+					{% endfor %}
+					</ul>
+				</div>
+				{% endif %}
+
+				{% if reviewer.abilities %}
+				<div>
+					<p>能力・技能</p>
+					<ul>
+					{% for ability in reviewer.abilities %}
+						<li>{{ ability }}</li>
+					{% endfor %}
+					</ul>
+				</div>
+				{% endif %}
+
+				{% if reviewer.episodes %}
+				<div>
+					<p>エピソード</p>
+					<ul>
+					{% for episode in reviewer.episodes %}
+						<li>{{ episode }}</li>
+					{% endfor %}
+					</ul>
+				</div>
+				{% endif %}
+			</div>
+		{% endfor %}
+	</div>
 </div>
