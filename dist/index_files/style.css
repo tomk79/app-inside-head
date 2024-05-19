@@ -7,7 +7,6 @@
 }
 .cont-diaolog-member-profile__inner, .cont-dialog-ideation__inner, .cont-diaolog-review__inner, .cont-diaolog-conclusion__inner {
   padding: 2em;
-  border: 1px solid #999;
   border-radius: 4px;
 }
 .cont-diaolog-member-profile__section-title, .cont-dialog-ideation__section-title, .cont-diaolog-review__section-title, .cont-diaolog-conclusion__section-title {
