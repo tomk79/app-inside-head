@@ -2,6 +2,7 @@
   margin: 1em 0;
   border: 1px solid #999;
   border-radius: 13px;
+  overflow: hidden;
   position: relative;
 }
 .cont-diaolog-member-profile__inner, .cont-dialog-ideation__inner, .cont-diaolog-review__inner, .cont-diaolog-conclusion__inner {
@@ -9,7 +10,7 @@
   border: 1px solid #999;
   border-radius: 4px;
 }
-.cont-diaolog-member-profile h2, .cont-diaolog-member-profile h3, .cont-dialog-ideation h2, .cont-dialog-ideation h3, .cont-diaolog-review h2, .cont-diaolog-review h3, .cont-diaolog-conclusion h2, .cont-diaolog-conclusion h3 {
+.cont-diaolog-member-profile__section-title, .cont-dialog-ideation__section-title, .cont-diaolog-review__section-title, .cont-diaolog-conclusion__section-title {
   font-size: 12px;
   margin: 0;
   position: absolute;

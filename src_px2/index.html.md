@@ -5,6 +5,8 @@
 <p>
     <input type="file" name="committee-settings" value="" class="px2-input" />
 </p>
+<div id="cont-profile"></div>
+
 <h2>課題</h2>
 <p><textarea name="main-theme" class="px2-input px2-input--block">今夜のディーナーの献立を何にするか？
 カレーとうどんとハンバーグの中から1つを選択する。</textarea></p>

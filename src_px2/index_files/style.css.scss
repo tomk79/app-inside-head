@@ -5,6 +5,7 @@
     margin: 1em 0;
     border: 1px solid #999;
     border-radius: 13px;
+    overflow: hidden;
     position: relative;
 
     &__inner {
@@ -13,8 +14,7 @@
         border-radius: 4px;
     }
 
-    h2,
-    h3 {
+    &__section-title {
         font-size: 12px;
         margin: 0;
         position: absolute;

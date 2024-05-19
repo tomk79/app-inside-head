@@ -69,17 +69,6 @@ class Committee {
 
 		if(!this.#ideationMessageLog.length){
 			// 最初の提案を作成
-			this.#callback_onmessage({
-				phase: 'profile',
-				presenter: this.#members.presenter.getProfile(),
-				reviewers: (()=>{
-					const reviewers = [];
-					this.#members.reviewers.forEach((reviewer)=>{
-						reviewers.push(reviewer.getProfile());
-					});
-					return reviewers;
-				})(),
-			});
 			this.#ideationMessageLog.push({
 				role: "user",
 				content: this.#bindTemplate("ideation", {
@@ -94,6 +83,7 @@ class Committee {
 				this.#currentIdea = result.choices[0].message.content;
 				this.#callback_onmessage({
 					phase: 'ideation',
+					turnNumber: this.#turnNumber,
 					currentIdea: this.#currentIdea,
 				});
 				this.#review();
