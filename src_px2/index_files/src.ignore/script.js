@@ -76,6 +76,7 @@ $btnStart.on('click', ()=>{
 	$btnStart.attr({'disabled': true});
 	$btnStop.attr({'disabled': false});
 	const inputMainTheme = $('textarea[name="main-theme"]').val();
+	const inputIdeasSeed = $('textarea[name="ideas-seed"]').val();
 
 	if( !committeeSettings ){
 		return;
@@ -84,6 +85,7 @@ $btnStart.on('click', ()=>{
 	$discussionLog.html('');
 	committee.init({
 		mainTheme: inputMainTheme,
+		ideasSeed: inputIdeasSeed,
 		members: committeeSettings,
 		onmessage: (message)=>{
 			console.log('=-=-=-=-= message:', message);

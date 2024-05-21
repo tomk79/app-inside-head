@@ -10,6 +10,9 @@
 <h2>課題</h2>
 <p><textarea name="main-theme" class="px2-input px2-input--block">今夜のディーナーの献立を何にするか？
 カレーとうどんとハンバーグの中から1つを選択する。</textarea></p>
+
+<h2>提案</h2>
+<p><textarea name="ideas-seed" class="px2-input px2-input--block"></textarea></p>
 </div>
 <p>
     <button type="button" class="px2-btn px2-btn--primary" id="cont-btn-start">送信</button>

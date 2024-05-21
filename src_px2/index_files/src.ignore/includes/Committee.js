@@ -13,6 +13,7 @@ const templates = {
 class Committee {
 	#status = 'stop';
 	#mainTheme;
+	#ideasSeed;
 	#currentIdea;
 	#turnNumber = 0;
 	#ideationMessageLog = [];
@@ -34,6 +35,7 @@ class Committee {
 	init (params) {
 		this.#status = 'stop';
 		this.#mainTheme = params.mainTheme;
+		this.#ideasSeed = params.ideasSeed;
 		this.#currentIdea = '';
 		this.#turnNumber = 0;
 		this.#ideationMessageLog = [];
@@ -75,6 +77,23 @@ class Committee {
 					mainTheme: this.#mainTheme,
 				}),
 			});
+
+			if(this.#ideasSeed){
+				this.#ideationMessageLog.push({
+					role: "assistant",
+					content: this.#ideasSeed,
+				});
+				this.#currentIdea = this.#ideasSeed;
+
+				this.#callback_onmessage({
+					phase: 'ideation',
+					turnNumber: this.#turnNumber,
+					currentIdea: this.#currentIdea,
+				});
+
+				this.#review();
+				return;
+			}
 		}
 
 		this.#members.presenter.ask(this.#ideationMessageLog)
