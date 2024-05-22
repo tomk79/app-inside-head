@@ -1,22 +1,22 @@
-.cont-diaolog-member-profile, .cont-dialog-ideation, .cont-diaolog-review, .cont-diaolog-conclusion {
+.cont-dialog-member-profile, .cont-dialog-ideation, .cont-dialog-review, .cont-dialog-judgement, .cont-dialog-conclusion {
   margin: 1em 0;
   border: 1px solid #999;
   border-radius: 13px;
   overflow: hidden;
   position: relative;
 }
-.cont-diaolog-member-profile__inner, .cont-dialog-ideation__inner, .cont-diaolog-review__inner, .cont-diaolog-conclusion__inner {
+.cont-dialog-member-profile__inner, .cont-dialog-ideation__inner, .cont-dialog-review__inner, .cont-dialog-judgement__inner, .cont-dialog-conclusion__inner {
   padding: 2em;
   border-radius: 4px;
 }
-.cont-diaolog-member-profile__section-title, .cont-dialog-ideation__section-title, .cont-diaolog-review__section-title, .cont-diaolog-conclusion__section-title {
+.cont-dialog-member-profile__section-title, .cont-dialog-ideation__section-title, .cont-dialog-review__section-title, .cont-dialog-judgement__section-title, .cont-dialog-conclusion__section-title {
   font-size: 12px;
   margin: 0;
   position: absolute;
   left: 5px;
   top: 5px;
 }
-.cont-diaolog-member-profile {
+.cont-dialog-member-profile {
   border: 1px solid #ab8800;
   background-color: #fff3e1;
 }
@@ -24,29 +24,34 @@
   border: 1px solid #1d1dae;
   background-color: #dde9ff;
 }
-.cont-diaolog-review {
+.cont-dialog-review {
   border: 1px solid #484848;
   background-color: #e2e2e2;
 }
-.cont-diaolog-review__answer {
+.cont-dialog-review__answer {
   border: 1px solid #999;
   border-radius: 5px;
   margin: 1em 0;
   position: relative;
 }
-.cont-diaolog-review__answer__inner {
+.cont-dialog-review__answer__inner {
   padding: 2em;
 }
-.cont-diaolog-review__answer--stance-true {
+.cont-dialog-review__answer--stance-true {
   border: 1px solid #169100;
   background-color: #dfffe2;
 }
-.cont-diaolog-review__answer--stance-false {
+.cont-dialog-review__answer--stance-false {
   border: 1px solid #333333;
   background-color: #e2e2e2;
 }
-.cont-diaolog-conclusion {
+.cont-dialog-judgement {
   margin-top: 3em;
   border: 1px solid #1d1dae;
-  background-color: #dde9ff;
+  background-color: #fffefe;
+}
+.cont-dialog-conclusion {
+  margin-top: 3em;
+  border: 1px solid #1d1dae;
+  background-color: #fffefe;
 }

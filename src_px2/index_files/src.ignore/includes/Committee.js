@@ -1,14 +1,17 @@
 import Twig from "twig";
 import Member from "./Member";
 import templateIdeation from "-!text-loader!./templates/prompts/ideation.twig";
+import templateJudgement from "-!text-loader!./templates/prompts/judgement.twig";
 import templateRetake from "-!text-loader!./templates/prompts/retake.twig";
 import templateReview from "-!text-loader!./templates/prompts/review.twig";
 
 const templates = {
 	ideation: templateIdeation,
+	judgement: templateJudgement,
 	retake: templateRetake,
 	review: templateReview,
 };
+const maxTurnNumber = 20;
 
 class Committee {
 	#status = 'stop';
@@ -65,7 +68,8 @@ class Committee {
 	 */
 	#ideation () {
 		this.#turnNumber ++;
-		if( this.#turnNumber > 10 || this.#status == 'stop' ){
+		if( this.#turnNumber > maxTurnNumber || this.#status == 'stop' ){
+			this.#judgement();
 			return;
 		}
 
@@ -199,6 +203,32 @@ class Committee {
 			}
 		});
 		return counter;
+	}
+
+	/**
+	 * 結論を出す
+	 */
+	#judgement () {
+		this.#ideationMessageLog.push({
+			role: "user",
+			content: this.#bindTemplate("judgement", {
+				mainTheme: this.#mainTheme,
+			}),
+		});
+
+		this.#members.presenter.ask(this.#ideationMessageLog)
+			.then((result)=>{
+				this.#ideationMessageLog.push(result.choices[0].message);
+				this.#currentIdea = result.choices[0].message.content;
+				this.#callback_onmessage({
+					phase: 'judgement',
+					currentIdea: this.#currentIdea,
+				});
+				this.stopDiscussion();
+			}).catch((err)=>{
+				console.error(err);
+				this.stopDiscussion();
+			});
 	}
 
 	/**

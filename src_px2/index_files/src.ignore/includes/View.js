@@ -2,6 +2,7 @@ import Twig from "twig";
 import templateProfile from "-!text-loader!./templates/views/profile.twig";
 import templateConclusion from "-!text-loader!./templates/views/conclusion.twig";
 import templateIdeation from "-!text-loader!./templates/views/ideation.twig";
+import templateJudgement from "-!text-loader!./templates/views/judgement.twig";
 import templateReview from "-!text-loader!./templates/views/review.twig";
 import {marked} from 'marked';
 
@@ -9,6 +10,7 @@ const templates = {
 	profile: templateProfile,
 	conclusion: templateConclusion,
 	ideation: templateIdeation,
+	judgement: templateJudgement,
 	review: templateReview,
 };
 

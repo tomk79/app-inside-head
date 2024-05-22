@@ -1,7 +1,8 @@
-.cont-diaolog-member-profile,
+.cont-dialog-member-profile,
 .cont-dialog-ideation,
-.cont-diaolog-review,
-.cont-diaolog-conclusion {
+.cont-dialog-review,
+.cont-dialog-judgement,
+.cont-dialog-conclusion {
     margin: 1em 0;
     border: 1px solid #999;
     border-radius: 13px;
@@ -21,7 +22,7 @@
         top: 5px;
     }
 }
-.cont-diaolog-member-profile {
+.cont-dialog-member-profile {
     border: 1px solid rgb(171, 136, 0);
     background-color: rgb(255, 243, 225);
 }
@@ -29,7 +30,7 @@
     border: 1px solid rgb(29, 29, 174);
     background-color: rgb(221, 233, 255);
 }
-.cont-diaolog-review {
+.cont-dialog-review {
     border: 1px solid rgb(72, 72, 72);
     background-color: rgb(226, 226, 226);
 
@@ -52,8 +53,13 @@
         }
     }
 }
-.cont-diaolog-conclusion {
+.cont-dialog-judgement {
     margin-top: 3em;
     border: 1px solid rgb(29, 29, 174);
-    background-color: rgb(221, 233, 255);
+    background-color: #fffefe;
+}
+.cont-dialog-conclusion {
+    margin-top: 3em;
+    border: 1px solid rgb(29, 29, 174);
+    background-color: #fffefe;
 }
