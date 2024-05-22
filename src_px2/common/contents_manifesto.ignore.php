@@ -29,3 +29,10 @@
 <!-- Contents Styles -->
 <link rel="stylesheet" href="<?= htmlspecialchars($px->href('/common/styles/contents.css')); ?>" type="text/css" />
 <script src="<?= htmlspecialchars( $px->href('/common/scripts/contents.js') ); ?>"></script>
+
+<?php ob_start(); ?>
+<?php
+$tracker = new \appInsideHead\tracker($px);
+echo $tracker->get_ga_tracker();
+?>
+<?php $px->bowl()->put( ob_get_clean().$px->bowl()->get_clean('foot'), 'foot' ); ?>

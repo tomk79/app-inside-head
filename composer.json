@@ -47,6 +47,11 @@
         "twig/twig": "~3.9.3"
     },
     "autoload": {
+		"psr-4": {
+            "appInsideHead\\": [
+                "px-files/_sys/php/"
+            ]
+		},
         "files": [
         ]
     }

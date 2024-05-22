@@ -25,7 +25,7 @@ return call_user_func( function(){
 	$conf->tagline = '';
 
 	/** コピーライト表記 */
-	$conf->copyright = 'Pickles Project';
+	$conf->copyright = 'Tomoya Koyanagi';
 
 	/** デフォルトの言語 */
 	$conf->default_lang = 'ja';
