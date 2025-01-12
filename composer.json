@@ -44,7 +44,7 @@
         "tomk79/px2-scss": "~0.1",
         "tomk79/px2-serve": "~0.1",
         "vlucas/phpdotenv": "~5.4.0",
-        "twig/twig": "~3.9.3"
+        "twig/twig": "<=3.8.0"
     },
     "autoload": {
 		"psr-4": {

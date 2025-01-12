@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "31639015cdd83106bc1a668309dc3e3b",
+    "content-hash": "9ecf00f105891b4412ad2657baa9f74b",
     "packages": [
         {
             "name": "broccoli-html-editor/broccoli-field-summernote",
-            "version": "0.3.x-dev",
+            "version": "0.4.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/broccoli-html-editor/broccoli-field-summernote.git",
-                "reference": "aa255ffea22d11990b91be4c57f2006665ca2eea"
+                "reference": "88501c3c56f123dcfa3300cca704d3022157ecb4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/broccoli-html-editor/broccoli-field-summernote/zipball/aa255ffea22d11990b91be4c57f2006665ca2eea",
-                "reference": "aa255ffea22d11990b91be4c57f2006665ca2eea",
+                "url": "https://api.github.com/repos/broccoli-html-editor/broccoli-field-summernote/zipball/88501c3c56f123dcfa3300cca704d3022157ecb4",
+                "reference": "88501c3c56f123dcfa3300cca704d3022157ecb4",
                 "shasum": ""
             },
             "require": {
@@ -52,9 +52,9 @@
             ],
             "support": {
                 "issues": "https://github.com/broccoli-html-editor/broccoli-field-summernote/issues",
-                "source": "https://github.com/broccoli-html-editor/broccoli-field-summernote/tree/0.3.2"
+                "source": "https://github.com/broccoli-html-editor/broccoli-field-summernote/tree/0.4.1"
             },
-            "time": "2023-11-12T16:01:21+00:00"
+            "time": "2024-11-01T14:30:07+00:00"
         },
         {
             "name": "broccoli-html-editor/broccoli-field-table",
@@ -107,16 +107,16 @@
         },
         {
             "name": "broccoli-html-editor/broccoli-html-editor",
-            "version": "1.1.2",
+            "version": "1.2.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/broccoli-html-editor/broccoli-html-editor.git",
-                "reference": "c86759f2bccf60e61b0d48bca5bf6f316e1cfabf"
+                "reference": "3448daecb5b0694447f92ff19f31cae12833542e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/broccoli-html-editor/broccoli-html-editor/zipball/c86759f2bccf60e61b0d48bca5bf6f316e1cfabf",
-                "reference": "c86759f2bccf60e61b0d48bca5bf6f316e1cfabf",
+                "url": "https://api.github.com/repos/broccoli-html-editor/broccoli-html-editor/zipball/3448daecb5b0694447f92ff19f31cae12833542e",
+                "reference": "3448daecb5b0694447f92ff19f31cae12833542e",
                 "shasum": ""
             },
             "require": {
@@ -127,7 +127,7 @@
                 "scssphp/scssphp": ">=1.4",
                 "tomk79/filesystem": "^1.0",
                 "tomk79/langbank": "^0.3.0||^0.2.0||^0.1.0||^0.0.4",
-                "twig/twig": "^1.35||^2.12|^3.8"
+                "twig/twig": "^1.35||^2.12|~3.8.0"
             },
             "require-dev": {
                 "phpunit/phpunit": "~9.5",
@@ -165,26 +165,26 @@
             ],
             "support": {
                 "issues": "https://github.com/broccoli-html-editor/broccoli-html-editor/issues",
-                "source": "https://github.com/broccoli-html-editor/broccoli-html-editor/tree/1.1.2"
+                "source": "https://github.com/broccoli-html-editor/broccoli-html-editor/tree/1.2.2"
             },
-            "time": "2024-04-29T16:42:17+00:00"
+            "time": "2024-12-25T11:40:08+00:00"
         },
         {
             "name": "ezyang/htmlpurifier",
-            "version": "v4.17.0",
+            "version": "v4.18.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ezyang/htmlpurifier.git",
-                "reference": "bbc513d79acf6691fa9cf10f192c90dd2957f18c"
+                "reference": "cb56001e54359df7ae76dc522d08845dc741621b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ezyang/htmlpurifier/zipball/bbc513d79acf6691fa9cf10f192c90dd2957f18c",
-                "reference": "bbc513d79acf6691fa9cf10f192c90dd2957f18c",
+                "url": "https://api.github.com/repos/ezyang/htmlpurifier/zipball/cb56001e54359df7ae76dc522d08845dc741621b",
+                "reference": "cb56001e54359df7ae76dc522d08845dc741621b",
                 "shasum": ""
             },
             "require": {
-                "php": "~5.6.0 || ~7.0.0 || ~7.1.0 || ~7.2.0 || ~7.3.0 || ~7.4.0 || ~8.0.0 || ~8.1.0 || ~8.2.0 || ~8.3.0"
+                "php": "~5.6.0 || ~7.0.0 || ~7.1.0 || ~7.2.0 || ~7.3.0 || ~7.4.0 || ~8.0.0 || ~8.1.0 || ~8.2.0 || ~8.3.0 || ~8.4.0"
             },
             "require-dev": {
                 "cerdic/css-tidy": "^1.7 || ^2.0",
@@ -226,9 +226,9 @@
             ],
             "support": {
                 "issues": "https://github.com/ezyang/htmlpurifier/issues",
-                "source": "https://github.com/ezyang/htmlpurifier/tree/v4.17.0"
+                "source": "https://github.com/ezyang/htmlpurifier/tree/v4.18.0"
             },
-            "time": "2023-11-17T15:01:25+00:00"
+            "time": "2024-11-01T03:51:45+00:00"
         },
         {
             "name": "graham-campbell/result-type",
@@ -236,20 +236,20 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/GrahamCampbell/Result-Type.git",
-                "reference": "fbd48bce38f73f8a4ec8583362e732e4095e5862"
+                "reference": "3ba905c11371512af9d9bdd27d99b782216b6945"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Result-Type/zipball/fbd48bce38f73f8a4ec8583362e732e4095e5862",
-                "reference": "fbd48bce38f73f8a4ec8583362e732e4095e5862",
+                "url": "https://api.github.com/repos/GrahamCampbell/Result-Type/zipball/3ba905c11371512af9d9bdd27d99b782216b6945",
+                "reference": "3ba905c11371512af9d9bdd27d99b782216b6945",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.2.5 || ^8.0",
-                "phpoption/phpoption": "^1.9.2"
+                "phpoption/phpoption": "^1.9.3"
             },
             "require-dev": {
-                "phpunit/phpunit": "^8.5.34 || ^9.6.13 || ^10.4.2"
+                "phpunit/phpunit": "^8.5.39 || ^9.6.20 || ^10.5.28"
             },
             "default-branch": true,
             "type": "library",
@@ -279,7 +279,7 @@
             ],
             "support": {
                 "issues": "https://github.com/GrahamCampbell/Result-Type/issues",
-                "source": "https://github.com/GrahamCampbell/Result-Type/tree/v1.1.2"
+                "source": "https://github.com/GrahamCampbell/Result-Type/tree/v1.1.3"
             },
             "funding": [
                 {
@@ -291,79 +291,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-11-12T22:16:48+00:00"
-        },
-        {
-            "name": "leafo/scssphp",
-            "version": "v0.8.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/leafo/scssphp.git",
-                "reference": "1b168bfee60889547e1fe55b9afdf055f6d3c58d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/leafo/scssphp/zipball/1b168bfee60889547e1fe55b9afdf055f6d3c58d",
-                "reference": "1b168bfee60889547e1fe55b9afdf055f6d3c58d",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~4.6",
-                "squizlabs/php_codesniffer": "~2.5",
-                "twbs/bootstrap": "~4.3",
-                "zurb/foundation": "~6.5"
-            },
-            "bin": [
-                "bin/pscss"
-            ],
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Leafo\\ScssPhp\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Leaf Corcoran",
-                    "email": "leafot@gmail.com",
-                    "homepage": "http://leafo.net"
-                }
-            ],
-            "description": "scssphp is a compiler for SCSS written in PHP.",
-            "homepage": "http://leafo.github.io/scssphp/",
-            "keywords": [
-                "css",
-                "less",
-                "sass",
-                "scss",
-                "stylesheet"
-            ],
-            "support": {
-                "issues": "https://github.com/leafo/scssphp/issues",
-                "source": "https://github.com/leafo/scssphp/tree/v0.8.2"
-            },
-            "abandoned": "scssphp/scssphp",
-            "time": "2019-05-09T18:51:51+00:00"
+            "time": "2024-07-20T21:45:45+00:00"
         },
         {
             "name": "maennchen/zipstream-php",
-            "version": "3.1.0",
+            "version": "3.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/maennchen/ZipStream-PHP.git",
-                "reference": "b8174494eda667f7d13876b4a7bfef0f62a7c0d1"
+                "reference": "6187e9cc4493da94b9b63eb2315821552015fca9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/maennchen/ZipStream-PHP/zipball/b8174494eda667f7d13876b4a7bfef0f62a7c0d1",
-                "reference": "b8174494eda667f7d13876b4a7bfef0f62a7c0d1",
+                "url": "https://api.github.com/repos/maennchen/ZipStream-PHP/zipball/6187e9cc4493da94b9b63eb2315821552015fca9",
+                "reference": "6187e9cc4493da94b9b63eb2315821552015fca9",
                 "shasum": ""
             },
             "require": {
@@ -419,19 +360,15 @@
             ],
             "support": {
                 "issues": "https://github.com/maennchen/ZipStream-PHP/issues",
-                "source": "https://github.com/maennchen/ZipStream-PHP/tree/3.1.0"
+                "source": "https://github.com/maennchen/ZipStream-PHP/tree/3.1.1"
             },
             "funding": [
                 {
                     "url": "https://github.com/maennchen",
                     "type": "github"
-                },
-                {
-                    "url": "https://opencollective.com/zipstream",
-                    "type": "open_collective"
                 }
             ],
-            "time": "2023-06-21T14:59:35+00:00"
+            "time": "2024-10-10T12:33:01+00:00"
         },
         {
             "name": "markbaker/complex",
@@ -597,16 +534,16 @@
         },
         {
             "name": "phpoffice/phpspreadsheet",
-            "version": "1.29.0",
+            "version": "1.29.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPOffice/PhpSpreadsheet.git",
-                "reference": "fde2ccf55eaef7e86021ff1acce26479160a0fa0"
+                "reference": "089ffdfc04b5fcf25a3503d81a4e589f247e20e3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPOffice/PhpSpreadsheet/zipball/fde2ccf55eaef7e86021ff1acce26479160a0fa0",
-                "reference": "fde2ccf55eaef7e86021ff1acce26479160a0fa0",
+                "url": "https://api.github.com/repos/PHPOffice/PhpSpreadsheet/zipball/089ffdfc04b5fcf25a3503d81a4e589f247e20e3",
+                "reference": "089ffdfc04b5fcf25a3503d81a4e589f247e20e3",
                 "shasum": ""
             },
             "require": {
@@ -634,14 +571,14 @@
             },
             "require-dev": {
                 "dealerdirect/phpcodesniffer-composer-installer": "dev-main",
-                "dompdf/dompdf": "^1.0 || ^2.0",
+                "dompdf/dompdf": "^1.0 || ^2.0 || ^3.0",
                 "friendsofphp/php-cs-fixer": "^3.2",
                 "mitoteam/jpgraph": "^10.3",
                 "mpdf/mpdf": "^8.1.1",
                 "phpcompatibility/php-compatibility": "^9.3",
                 "phpstan/phpstan": "^1.1",
                 "phpstan/phpstan-phpunit": "^1.0",
-                "phpunit/phpunit": "^8.5 || ^9.0 || ^10.0",
+                "phpunit/phpunit": "^8.5 || ^9.0",
                 "squizlabs/php_codesniffer": "^3.7",
                 "tecnickcom/tcpdf": "^6.5"
             },
@@ -696,9 +633,9 @@
             ],
             "support": {
                 "issues": "https://github.com/PHPOffice/PhpSpreadsheet/issues",
-                "source": "https://github.com/PHPOffice/PhpSpreadsheet/tree/1.29.0"
+                "source": "https://github.com/PHPOffice/PhpSpreadsheet/tree/1.29.8"
             },
-            "time": "2023-06-14T22:48:31+00:00"
+            "time": "2025-01-12T03:16:27+00:00"
         },
         {
             "name": "phpoption/phpoption",
@@ -706,12 +643,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/schmittjoh/php-option.git",
-                "reference": "416ca2ac2a84555b785a98002d613fe13d1d1c2f"
+                "reference": "e3fac8b24f56113f7cb96af14958c0dd16330f54"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/schmittjoh/php-option/zipball/416ca2ac2a84555b785a98002d613fe13d1d1c2f",
-                "reference": "416ca2ac2a84555b785a98002d613fe13d1d1c2f",
+                "url": "https://api.github.com/repos/schmittjoh/php-option/zipball/e3fac8b24f56113f7cb96af14958c0dd16330f54",
+                "reference": "e3fac8b24f56113f7cb96af14958c0dd16330f54",
                 "shasum": ""
             },
             "require": {
@@ -719,7 +656,7 @@
             },
             "require-dev": {
                 "bamarni/composer-bin-plugin": "^1.8.2",
-                "phpunit/phpunit": "^8.5.34 || ^9.6.13 || ^10.4.2"
+                "phpunit/phpunit": "^8.5.39 || ^9.6.20 || ^10.5.28"
             },
             "default-branch": true,
             "type": "library",
@@ -762,7 +699,7 @@
             ],
             "support": {
                 "issues": "https://github.com/schmittjoh/php-option/issues",
-                "source": "https://github.com/schmittjoh/php-option/tree/master"
+                "source": "https://github.com/schmittjoh/php-option/tree/1.9.3"
             },
             "funding": [
                 {
@@ -774,7 +711,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-11-12T22:52:20+00:00"
+            "time": "2024-07-20T21:41:07+00:00"
         },
         {
             "name": "pickles2/lib-px2-contents-editor",
@@ -782,12 +719,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/pickles2/lib-px2-contents-editor.git",
-                "reference": "7e6e3f84fd5d1c964f32d8fde935fe6f097e4e32"
+                "reference": "b9e5e9409e0bad25ccfe3af8d0d7df97474e4dc0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pickles2/lib-px2-contents-editor/zipball/7e6e3f84fd5d1c964f32d8fde935fe6f097e4e32",
-                "reference": "7e6e3f84fd5d1c964f32d8fde935fe6f097e4e32",
+                "url": "https://api.github.com/repos/pickles2/lib-px2-contents-editor/zipball/b9e5e9409e0bad25ccfe3af8d0d7df97474e4dc0",
+                "reference": "b9e5e9409e0bad25ccfe3af8d0d7df97474e4dc0",
                 "shasum": ""
             },
             "require": {
@@ -836,9 +773,9 @@
             ],
             "support": {
                 "issues": "https://github.com/pickles2/lib-px2-contents-editor/issues",
-                "source": "https://github.com/pickles2/lib-px2-contents-editor/tree/2.2.3"
+                "source": "https://github.com/pickles2/lib-px2-contents-editor/tree/2.2.7"
             },
-            "time": "2024-03-20T04:04:36+00:00"
+            "time": "2024-12-25T11:45:04+00:00"
         },
         {
             "name": "pickles2/lib-px2-module-editor",
@@ -908,12 +845,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/pickles2/lib-px2-theme-editor.git",
-                "reference": "1d87d70ce13ad7d307ae74e35c216db6da718b5c"
+                "reference": "803cae577f6fad3ad6d5d5cd817bc9fa0acd40fd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pickles2/lib-px2-theme-editor/zipball/1d87d70ce13ad7d307ae74e35c216db6da718b5c",
-                "reference": "1d87d70ce13ad7d307ae74e35c216db6da718b5c",
+                "url": "https://api.github.com/repos/pickles2/lib-px2-theme-editor/zipball/803cae577f6fad3ad6d5d5cd817bc9fa0acd40fd",
+                "reference": "803cae577f6fad3ad6d5d5cd817bc9fa0acd40fd",
                 "shasum": ""
             },
             "require": {
@@ -960,9 +897,9 @@
             ],
             "support": {
                 "issues": "https://github.com/pickles2/lib-px2-theme-editor/issues",
-                "source": "https://github.com/pickles2/lib-px2-theme-editor/tree/0.2.11"
+                "source": "https://github.com/pickles2/lib-px2-theme-editor/tree/0.2.12"
             },
-            "time": "2024-04-30T03:34:19+00:00"
+            "time": "2024-09-10T11:44:25+00:00"
         },
         {
             "name": "pickles2/px-fw-2.x",
@@ -1090,16 +1027,16 @@
         },
         {
             "name": "pickles2/px2-clover",
-            "version": "0.3.4",
+            "version": "0.3.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pickles2/px2-clover.git",
-                "reference": "3b2b244b114e31da8878dbf0eee5b42a216d5550"
+                "reference": "6f1764113b7e6365cbeb6d01e8db8f65cb27abec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pickles2/px2-clover/zipball/3b2b244b114e31da8878dbf0eee5b42a216d5550",
-                "reference": "3b2b244b114e31da8878dbf0eee5b42a216d5550",
+                "url": "https://api.github.com/repos/pickles2/px2-clover/zipball/6f1764113b7e6365cbeb6d01e8db8f65cb27abec",
+                "reference": "6f1764113b7e6365cbeb6d01e8db8f65cb27abec",
                 "shasum": ""
             },
             "require": {
@@ -1108,7 +1045,7 @@
                 "pickles2/px2-px2dthelper": "~2.2",
                 "tomk79/langbank": "~0.2",
                 "tomk79/remote-finder": "~0.2",
-                "twig/twig": "~3.8"
+                "twig/twig": "~3.8.0"
             },
             "require-dev": {
                 "phpunit/phpunit": "~9.5",
@@ -1142,9 +1079,9 @@
             ],
             "support": {
                 "issues": "https://github.com/pickles2/px2-clover/issues",
-                "source": "https://github.com/pickles2/px2-clover/tree/0.3.4"
+                "source": "https://github.com/pickles2/px2-clover/tree/0.3.8"
             },
-            "time": "2024-04-30T03:39:27+00:00"
+            "time": "2024-11-01T14:18:02+00:00"
         },
         {
             "name": "pickles2/px2-dec",
@@ -1431,12 +1368,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/pickles2/px2-px2dthelper.git",
-                "reference": "a126283c1319a6719c8db6f622a905d97196c5b7"
+                "reference": "35f9739ed8bba65c13b7de566d4c4caa48ca7dc9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pickles2/px2-px2dthelper/zipball/a126283c1319a6719c8db6f622a905d97196c5b7",
-                "reference": "a126283c1319a6719c8db6f622a905d97196c5b7",
+                "url": "https://api.github.com/repos/pickles2/px2-px2dthelper/zipball/35f9739ed8bba65c13b7de566d4c4caa48ca7dc9",
+                "reference": "35f9739ed8bba65c13b7de566d4c4caa48ca7dc9",
                 "shasum": ""
             },
             "require": {
@@ -1487,9 +1424,9 @@
             ],
             "support": {
                 "issues": "https://github.com/pickles2/px2-px2dthelper/issues",
-                "source": "https://github.com/pickles2/px2-px2dthelper/tree/develop"
+                "source": "https://github.com/pickles2/px2-px2dthelper/tree/2.2.5"
             },
-            "time": "2024-02-18T06:13:37+00:00"
+            "time": "2024-11-01T14:05:33+00:00"
         },
         {
             "name": "pickles2/px2-remove-attr",
@@ -1548,17 +1485,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/pickles2/px2-sitemapexcel.git",
-                "reference": "2b34bc17317f50b328a4aef23bff5a2e05e9a3f5"
+                "reference": "1dc1f89fd95dd96dccbb84e6d55268dd32023b67"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pickles2/px2-sitemapexcel/zipball/2b34bc17317f50b328a4aef23bff5a2e05e9a3f5",
-                "reference": "2b34bc17317f50b328a4aef23bff5a2e05e9a3f5",
+                "url": "https://api.github.com/repos/pickles2/px2-sitemapexcel/zipball/1dc1f89fd95dd96dccbb84e6d55268dd32023b67",
+                "reference": "1dc1f89fd95dd96dccbb84e6d55268dd32023b67",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.3",
-                "phpoffice/phpspreadsheet": "^1.13",
+                "phpoffice/phpspreadsheet": "^2.2||^1.13",
                 "tomk79/filesystem": "^1.0"
             },
             "require-dev": {
@@ -1595,9 +1532,9 @@
             ],
             "support": {
                 "issues": "https://github.com/pickles2/px2-sitemapexcel/issues",
-                "source": "https://github.com/pickles2/px2-sitemapexcel/tree/2.3.2"
+                "source": "https://github.com/pickles2/px2-sitemapexcel/tree/2.3.3"
             },
-            "time": "2024-02-18T06:21:11+00:00"
+            "time": "2024-09-10T04:41:27+00:00"
         },
         {
             "name": "pickles2/px2agent",
@@ -1654,16 +1591,16 @@
         },
         {
             "name": "pickles2/px2style",
-            "version": "3.2.x-dev",
+            "version": "3.4.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pickles2/px2style.git",
-                "reference": "fb22f53b09a4527bb6fc09323dfb4c83d5675699"
+                "reference": "1d9a5cc19db4084c0762ff081d887f7c570cd564"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pickles2/px2style/zipball/fb22f53b09a4527bb6fc09323dfb4c83d5675699",
-                "reference": "fb22f53b09a4527bb6fc09323dfb4c83d5675699",
+                "url": "https://api.github.com/repos/pickles2/px2style/zipball/1d9a5cc19db4084c0762ff081d887f7c570cd564",
+                "reference": "1d9a5cc19db4084c0762ff081d887f7c570cd564",
                 "shasum": ""
             },
             "require": {
@@ -1706,9 +1643,9 @@
             ],
             "support": {
                 "issues": "https://github.com/pickles2/px2style/issues",
-                "source": "https://github.com/pickles2/px2style/tree/3.2.5"
+                "source": "https://github.com/pickles2/px2style/tree/3.4.2"
             },
-            "time": "2024-04-29T16:15:57+00:00"
+            "time": "2024-12-28T06:57:14+00:00"
         },
         {
             "name": "psr/http-client",
@@ -1930,12 +1867,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/scssphp/scssphp.git",
-                "reference": "394ed1e960138710a60d035c1a85d43d0bf0faeb"
+                "reference": "63d1157457e5554edf00b0c1fabab4c1511d2520"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/scssphp/scssphp/zipball/394ed1e960138710a60d035c1a85d43d0bf0faeb",
-                "reference": "394ed1e960138710a60d035c1a85d43d0bf0faeb",
+                "url": "https://api.github.com/repos/scssphp/scssphp/zipball/63d1157457e5554edf00b0c1fabab4c1511d2520",
+                "reference": "63d1157457e5554edf00b0c1fabab4c1511d2520",
                 "shasum": ""
             },
             "require": {
@@ -1964,8 +1901,8 @@
             "type": "library",
             "extra": {
                 "bamarni-bin": {
-                    "forward-command": false,
-                    "bin-links": false
+                    "bin-links": false,
+                    "forward-command": false
                 }
             },
             "autoload": {
@@ -2002,75 +1939,7 @@
                 "issues": "https://github.com/scssphp/scssphp/issues",
                 "source": "https://github.com/scssphp/scssphp/tree/1.x"
             },
-            "time": "2024-01-13T12:36:40+00:00"
-        },
-        {
-            "name": "symfony/deprecation-contracts",
-            "version": "dev-main",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/deprecation-contracts.git",
-                "reference": "0e0d29ce1f20deffb4ab1b016a7257c4f1e789a1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/deprecation-contracts/zipball/0e0d29ce1f20deffb4ab1b016a7257c4f1e789a1",
-                "reference": "0e0d29ce1f20deffb4ab1b016a7257c4f1e789a1",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=8.1"
-            },
-            "default-branch": true,
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-main": "3.5-dev"
-                },
-                "thanks": {
-                    "name": "symfony/contracts",
-                    "url": "https://github.com/symfony/contracts"
-                }
-            },
-            "autoload": {
-                "files": [
-                    "function.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Nicolas Grekas",
-                    "email": "p@tchwork.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "A generic function and convention to trigger deprecation notices",
-            "homepage": "https://symfony.com",
-            "support": {
-                "source": "https://github.com/symfony/deprecation-contracts/tree/v3.5.0"
-            },
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2024-04-18T09:32:20+00:00"
+            "time": "2024-08-17T21:02:11+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -2078,16 +1947,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-ctype.git",
-                "reference": "c9e59dec962d38cf2e0e4c61c4a1a1312f4dd7fe"
+                "reference": "a3cc8b044a6ea513310cbd48ef7333b384945638"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/c9e59dec962d38cf2e0e4c61c4a1a1312f4dd7fe",
-                "reference": "c9e59dec962d38cf2e0e4c61c4a1a1312f4dd7fe",
+                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/a3cc8b044a6ea513310cbd48ef7333b384945638",
+                "reference": "a3cc8b044a6ea513310cbd48ef7333b384945638",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.1"
+                "php": ">=7.2"
             },
             "provide": {
                 "ext-ctype": "*"
@@ -2099,8 +1968,8 @@
             "type": "library",
             "extra": {
                 "thanks": {
-                    "name": "symfony/polyfill",
-                    "url": "https://github.com/symfony/polyfill"
+                    "url": "https://github.com/symfony/polyfill",
+                    "name": "symfony/polyfill"
                 }
             },
             "autoload": {
@@ -2134,7 +2003,7 @@
                 "portable"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-ctype/tree/1.x"
+                "source": "https://github.com/symfony/polyfill-ctype/tree/v1.31.0"
             },
             "funding": [
                 {
@@ -2150,7 +2019,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-04-19T06:31:17+00:00"
+            "time": "2024-09-09T11:45:10+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -2158,16 +2027,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "e642fbe7a7b73cdb05460555289a9057bfd6ead6"
+                "reference": "6d857f4d76bd4b343eac26d6b539585d2bc56493"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/e642fbe7a7b73cdb05460555289a9057bfd6ead6",
-                "reference": "e642fbe7a7b73cdb05460555289a9057bfd6ead6",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/6d857f4d76bd4b343eac26d6b539585d2bc56493",
+                "reference": "6d857f4d76bd4b343eac26d6b539585d2bc56493",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.1"
+                "ext-iconv": "*",
+                "php": ">=7.2"
             },
             "provide": {
                 "ext-mbstring": "*"
@@ -2179,8 +2049,8 @@
             "type": "library",
             "extra": {
                 "thanks": {
-                    "name": "symfony/polyfill",
-                    "url": "https://github.com/symfony/polyfill"
+                    "url": "https://github.com/symfony/polyfill",
+                    "name": "symfony/polyfill"
                 }
             },
             "autoload": {
@@ -2231,7 +2101,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-04-19T06:31:17+00:00"
+            "time": "2024-12-23T08:48:59+00:00"
         },
         {
             "name": "symfony/polyfill-php80",
@@ -2239,23 +2109,23 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php80.git",
-                "reference": "7d191eb4022901cd3d91a816ec5464ca3a08a8aa"
+                "reference": "60328e362d4c2c802a54fcbf04f9d3fb892b4cf8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php80/zipball/7d191eb4022901cd3d91a816ec5464ca3a08a8aa",
-                "reference": "7d191eb4022901cd3d91a816ec5464ca3a08a8aa",
+                "url": "https://api.github.com/repos/symfony/polyfill-php80/zipball/60328e362d4c2c802a54fcbf04f9d3fb892b4cf8",
+                "reference": "60328e362d4c2c802a54fcbf04f9d3fb892b4cf8",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.1"
+                "php": ">=7.2"
             },
             "default-branch": true,
             "type": "library",
             "extra": {
                 "thanks": {
-                    "name": "symfony/polyfill",
-                    "url": "https://github.com/symfony/polyfill"
+                    "url": "https://github.com/symfony/polyfill",
+                    "name": "symfony/polyfill"
                 }
             },
             "autoload": {
@@ -2296,7 +2166,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-php80/tree/1.x"
+                "source": "https://github.com/symfony/polyfill-php80/tree/v1.31.0"
             },
             "funding": [
                 {
@@ -2312,7 +2182,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-04-19T06:31:17+00:00"
+            "time": "2024-09-09T11:45:10+00:00"
         },
         {
             "name": "tomk79/color-utils",
@@ -2620,21 +2490,21 @@
         },
         {
             "name": "tomk79/px2-scss",
-            "version": "0.1.x-dev",
+            "version": "0.2.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tomk79/px2-scss.git",
-                "reference": "1bf8d84e54d1c984404bcc4f9d0e2e0f954fa645"
+                "reference": "63b741e91ccc0a550c4d9905a0e3ef71394b0827"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tomk79/px2-scss/zipball/1bf8d84e54d1c984404bcc4f9d0e2e0f954fa645",
-                "reference": "1bf8d84e54d1c984404bcc4f9d0e2e0f954fa645",
+                "url": "https://api.github.com/repos/tomk79/px2-scss/zipball/63b741e91ccc0a550c4d9905a0e3ef71394b0827",
+                "reference": "63b741e91ccc0a550c4d9905a0e3ef71394b0827",
                 "shasum": ""
             },
             "require": {
-                "leafo/scssphp": ">=0.7",
-                "php": ">=5.4.0"
+                "php": ">=5.4.0",
+                "scssphp/scssphp": "^1.4"
             },
             "require-dev": {
                 "phpunit/phpunit": "~9.5",
@@ -2668,9 +2538,9 @@
             ],
             "support": {
                 "issues": "https://github.com/tomk79/px2-scss/issues",
-                "source": "https://github.com/tomk79/px2-scss/tree/0.1.2"
+                "source": "https://github.com/tomk79/px2-scss/tree/0.2.x"
             },
-            "time": "2023-02-11T08:25:14+00:00"
+            "time": "2024-12-25T16:24:54+00:00"
         },
         {
             "name": "tomk79/px2-serve",
@@ -2725,16 +2595,16 @@
         },
         {
             "name": "tomk79/remote-finder",
-            "version": "0.3.x-dev",
+            "version": "0.4.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tomk79/node-remote-finder.git",
-                "reference": "ec6b01b85940031c3232359d4560cdbbdda9b5db"
+                "reference": "9bca79ee987446dec9986f2661c9a6ac676647f0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tomk79/node-remote-finder/zipball/ec6b01b85940031c3232359d4560cdbbdda9b5db",
-                "reference": "ec6b01b85940031c3232359d4560cdbbdda9b5db",
+                "url": "https://api.github.com/repos/tomk79/node-remote-finder/zipball/9bca79ee987446dec9986f2661c9a6ac676647f0",
+                "reference": "9bca79ee987446dec9986f2661c9a6ac676647f0",
                 "shasum": ""
             },
             "require": {
@@ -2766,9 +2636,9 @@
             "description": "Finder や Explorer のように、サーバー上のファイルとフォルダを操作するUIを提供します。",
             "support": {
                 "issues": "https://github.com/tomk79/node-remote-finder/issues",
-                "source": "https://github.com/tomk79/node-remote-finder/tree/0.3.0"
+                "source": "https://github.com/tomk79/node-remote-finder/tree/0.4.0"
             },
-            "time": "2024-04-29T16:34:50+00:00"
+            "time": "2024-12-25T10:32:00+00:00"
         },
         {
             "name": "tomk79/request",
@@ -2819,37 +2689,30 @@
         },
         {
             "name": "twig/twig",
-            "version": "v3.9.3",
+            "version": "v3.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "a842d75fed59cdbcbd3a3ad7fb9eb768fc350d58"
+                "reference": "9d15f0ac07f44dc4217883ec6ae02fd555c6f71d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/a842d75fed59cdbcbd3a3ad7fb9eb768fc350d58",
-                "reference": "a842d75fed59cdbcbd3a3ad7fb9eb768fc350d58",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/9d15f0ac07f44dc4217883ec6ae02fd555c6f71d",
+                "reference": "9d15f0ac07f44dc4217883ec6ae02fd555c6f71d",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.2.5",
-                "symfony/deprecation-contracts": "^2.5|^3",
                 "symfony/polyfill-ctype": "^1.8",
                 "symfony/polyfill-mbstring": "^1.3",
                 "symfony/polyfill-php80": "^1.22"
             },
             "require-dev": {
                 "psr/container": "^1.0|^2.0",
-                "symfony/phpunit-bridge": "^5.4.9|^6.4|^7.0"
+                "symfony/phpunit-bridge": "^5.4.9|^6.3|^7.0"
             },
             "type": "library",
             "autoload": {
-                "files": [
-                    "src/Resources/core.php",
-                    "src/Resources/debug.php",
-                    "src/Resources/escaper.php",
-                    "src/Resources/string_loader.php"
-                ],
                 "psr-4": {
                     "Twig\\": "src/"
                 }
@@ -2882,7 +2745,7 @@
             ],
             "support": {
                 "issues": "https://github.com/twigphp/Twig/issues",
-                "source": "https://github.com/twigphp/Twig/tree/v3.9.3"
+                "source": "https://github.com/twigphp/Twig/tree/v3.8.0"
             },
             "funding": [
                 {
@@ -2894,7 +2757,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-04-18T11:59:33+00:00"
+            "time": "2023-11-21T18:54:41+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
